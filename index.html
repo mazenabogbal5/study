@@ -17815,6 +17815,101 @@ function handleDragLeave(e) {
     studyTimerRemaining = mins * 60;
     updateTimerDisplay();
   }
+</script><script id="fix-lectures-view-rendered">
+  const subjectsDataMap = {
+    'anat101': {
+      code: 'ANAT-101',
+      titleAr: 'علم التشريح البشري 1',
+      titleEn: 'Human Anatomy I',
+      lectures: [
+        { id: 'anat101_lec1', num: '1', title: 'الأوضاع والاتجاهات التشريحية', subtitle: 'Positions & Relations' }
+      ]
+    },
+    'pphy102': {
+      code: 'PPHY-102',
+      titleAr: 'علم وظائف الأعضاء المرضي 1',
+      titleEn: 'Pathophysiology I',
+      lectures: [
+        { id: 'pphy102_lec1', num: '1', title: 'علم الأمراض والالتهاب', subtitle: 'Pathology & Inflammation' }
+      ]
+    },
+    'hs103': {
+      code: 'HS-103',
+      titleAr: 'التنوع الاجتماعي الثقافي والصحة',
+      titleEn: 'Sociocultural Variation & Health',
+      lectures: [
+        { id: 'socio_lec1', num: '1', title: 'قضايا التقييم الثقافي في الرعاية التمريضية', subtitle: 'Cultural Assessment Issues' }
+      ]
+    },
+    'engl099': { code: 'ENGL099', titleAr: 'اللغة الإنجليزية', titleEn: 'English Language', lectures: [] },
+    'humn101': { code: 'HUMN101', titleAr: 'علم النفس السلوكي', titleEn: 'Behavior Psychology', lectures: [] },
+    'comp101': { code: 'COMP101', titleAr: 'مقدمة في الحاسب الآلي', titleEn: 'Introduction to Computers', lectures: [] },
+    'phy101': { code: 'PHY-101', titleAr: 'علم وظائف الأعضاء البشري', titleEn: 'Human Physiology', lectures: [] }
+  };
+
+  window.renderSubjectLectures = function(subjKey) {
+    const container = document.getElementById('subjectLecturesContainer');
+    const badge = document.getElementById('subjLecturesCountBadge');
+    const codeEl = document.getElementById('subjOverviewCode');
+    const titleArEl = document.getElementById('subjOverviewTitleAr');
+    const titleEnEl = document.getElementById('subjOverviewTitleEn');
+    
+    const subj = subjectsDataMap[subjKey] || { code: subjKey, titleAr: 'المقرر', titleEn: '', lectures: [] };
+    
+    if (codeEl) codeEl.innerText = subj.code;
+    if (titleArEl) titleArEl.innerText = subj.titleAr;
+    if (titleEnEl) titleEnEl.innerText = subj.titleEn;
+
+    if (!container) return;
+    
+    if (!subj.lectures || subj.lectures.length === 0) {
+      if (badge) badge.innerText = '0 محاضرات';
+      container.innerHTML = `
+        <div class="subject-empty-card">
+          <div class="subject-empty-title">لا توجد محاضرات متاحة حالياً</div>
+          <div class="subject-empty-desc">سيتم رفع محاضرات هذا المقرر قريباً.</div>
+        </div>
+      `;
+      return;
+    }
+
+    if (badge) badge.innerText = `${subj.lectures.length} محاضرة`;
+    
+    container.innerHTML = subj.lectures.map(lec => `
+      <div class="qa-accordion-card open" style="margin-bottom: 12px;">
+        <div class="qa-header" style="cursor: pointer;" onclick="openLecture('${lec.id}')">
+          <div class="qa-title-area">
+            <span class="q-number-badge" style="background: var(--mint-500); color: white;">المحاضرة ${lec.num}</span>
+            <div class="q-text-wrapper">
+              <span class="q-title-en" dir="rtl" style="font-family: var(--font-ar); text-align: right; color: var(--text-main); font-weight: 800;">
+                ${lec.title}
+              </span>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-en);">${lec.subtitle}</span>
+            </div>
+          </div>
+          <div class="qa-header-actions">
+            <button class="lecture-start-btn" onclick="event.stopPropagation(); openLecture('${lec.id}')">
+              ابدأ المذاكرة
+            </button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  };
+
+  window.showSubjectOverview = function(subjId, pushState = true) {
+    document.body.classList.remove('in-lecture-view');
+    state.activeSubjectId = subjId;
+    const hv = document.getElementById('home-view');
+    const sv = document.getElementById('subject-overview-view');
+    const lv = document.getElementById('lecture-view');
+    if (hv) hv.style.display = 'none';
+    if (sv) sv.style.display = 'block';
+    if (lv) lv.style.display = 'none';
+    window.renderSubjectLectures(subjId);
+    if (pushState) history.pushState({ view: 'subject', subjectId: subjId }, '', '#subject-' + subjId);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 </script></body>
 
 </html>
