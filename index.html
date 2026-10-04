@@ -9572,6 +9572,17 @@
     color: var(--rose-600);
     border-color: var(--rose-border);
   }
+</style><style id="strict-view-isolation">
+  /* منع ظهور أقسام المحاضرة والبطاقات إطلاقاً إلا داخل شاشة المحاضرة المفعلة */
+  #home-view #section-flashcards,
+  #home-view .lecture-content-section,
+  #subject-overview-view #section-flashcards,
+  #subject-overview-view .lecture-content-section,
+  body:not(.in-lecture-view) #section-flashcards,
+  body:not(.in-lecture-view) .flashcard-mode-section,
+  body:not(.in-lecture-view) .lecture-content-section {
+    display: none !important;
+  }
 </style></head>
 
 <body>
@@ -16812,6 +16823,54 @@ function handleDragLeave(e) {
       if (typeof origLec === 'function') origLec(lecId, pushState);
     };
   });
+</script><script id="view-clean-reset-logic">
+  // تصفير وإخفاء كل أقسام المحاضرة والبطاقات عند مغادرتها
+  function resetAllLectureSections() {
+    document.body.classList.remove('in-lecture-view');
+    const sections = document.querySelectorAll('.lecture-content-section, .flashcard-mode-section, #section-flashcards');
+    sections.forEach(sec => {
+      sec.style.display = 'none';
+    });
+    const tabsContainer = document.querySelector('.study-tabs-container');
+    if (tabsContainer) tabsContainer.style.display = 'none';
+    const filterToolbar = document.querySelector('.filter-toolbar');
+    if (filterToolbar) filterToolbar.style.display = 'none';
+  }
+
+  // ربط الدالة بجميع أزرار التنقل والرجوع
+  const _origShowHome = window.showHomeView;
+  window.showHomeView = function(pushState = true) {
+    resetAllLectureSections();
+    const hv = document.getElementById('home-view');
+    const sv = document.getElementById('subject-overview-view');
+    const lv = document.getElementById('lecture-view');
+    if (hv) hv.style.display = 'block';
+    if (sv) sv.style.display = 'none';
+    if (lv) lv.style.display = 'none';
+    if (typeof _origShowHome === 'function') _origShowHome(pushState);
+  };
+
+  const _origShowSubj = window.showSubjectOverview;
+  window.showSubjectOverview = function(subjId, pushState = true) {
+    resetAllLectureSections();
+    const hv = document.getElementById('home-view');
+    const sv = document.getElementById('subject-overview-view');
+    const lv = document.getElementById('lecture-view');
+    if (hv) hv.style.display = 'none';
+    if (sv) sv.style.display = 'block';
+    if (lv) lv.style.display = 'none';
+    if (typeof _origShowSubj === 'function') _origShowSubj(subjId, pushState);
+  };
+
+  const _origBackFromLec = window.backFromLecture;
+  window.backFromLecture = function() {
+    resetAllLectureSections();
+    if (typeof _origBackFromLec === 'function') {
+      _origBackFromLec();
+    } else {
+      window.showSubjectOverview(state.activeSubjectId || 'anat101');
+    }
+  };
 </script></body>
 
 </html>
