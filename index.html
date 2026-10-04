@@ -9458,6 +9458,20 @@
     color: var(--rose-600);
     border-color: var(--rose-border);
   }
+</style><style id="fix-home-lecture-leak">
+  .home-view-container {
+    display: block;
+  }
+  .lecture-view-container {
+    display: none;
+  }
+  /* عند تفعيل الصفحة الرئيسية نضمن إخفاء كل أقسام المحاضرة بالكامل */
+  body:not(.in-lecture-view) #lecture-view,
+  body:not(.in-lecture-view) .study-tabs-container,
+  body:not(.in-lecture-view) .lecture-content-section,
+  body:not(.in-lecture-view) .filter-toolbar {
+    display: none !important;
+  }
 </style></head>
 
 <body>
@@ -17868,6 +17882,30 @@ function handleDragLeave(e) {
     studyTimerRemaining = mins * 60;
     updateTimerDisplay();
   }
+</script><script id='fix-home-navigation-guard'>
+  const originalShowHomeView = typeof showHomeView === "function" ? showHomeView : null;
+  window.showHomeView = function(pushState = true) {
+    document.body.classList.remove("in-lecture-view");
+    const homeView = document.getElementById("home-view");
+    const subjView = document.getElementById("subject-overview-view");
+    const lecView = document.getElementById("lecture-view");
+    if (homeView) homeView.style.display = "block";
+    if (subjView) subjView.style.display = "none";
+    if (lecView) lecView.style.display = "none";
+    if (originalShowHomeView) originalShowHomeView(pushState);
+  };
+
+  const originalOpenLecture = typeof openLecture === "function" ? openLecture : null;
+  window.openLecture = function(lecId, pushState = true) {
+    document.body.classList.add("in-lecture-view");
+    const homeView = document.getElementById("home-view");
+    const subjView = document.getElementById("subject-overview-view");
+    const lecView = document.getElementById("lecture-view");
+    if (homeView) homeView.style.display = "none";
+    if (subjView) subjView.style.display = "none";
+    if (lecView) lecView.style.display = "block";
+    if (originalOpenLecture) originalOpenLecture(lecId, pushState);
+  };
 </script></body>
 
 </html>
