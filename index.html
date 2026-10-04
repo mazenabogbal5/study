@@ -9357,6 +9357,107 @@
   .lecture-acc-details {
     display: none !important;
   }
+</style><style id="clean-minimal-layout">
+  /* إخفاء كافة فقرات الشرح والوصف بالعربي في كل المواد حالياً ومستقبلاً */
+  .lecture-hero .hero-desc,
+  .section-header-wrap .section-subtitle,
+  .subject-overview-desc,
+  #subjOverviewDesc,
+  .lecture-acc-details,
+  .exam-section-intro,
+  .home-hero-desc,
+  .brand-text span {
+    display: none !important;
+  }
+
+  /* إبقاء الأرقام نصية نظيفة مع تفريغ أي دوائر أو مربعات أو خلفيات عنها */
+  .tab-btn .tab-count {
+    display: inline !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 4px !important;
+    border-radius: 0 !important;
+    font-weight: 700 !important;
+    color: inherit !important;
+  }
+  .tab-btn.active .tab-count {
+    color: #ffffff !important;
+    background: transparent !important;
+  }
+
+  /* إزالة أي إطارات أو خلفيات حول الشارات والأسهم */
+  .subject-badge, .badge, .subject-code, .hero-badge, .home-section-badge {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* إخفاء الأيقونات والدوائر الزائدة */
+  .stat-icon, .section-icon-badge, .tool-icon, .exp-icon-box, 
+  .modal-icon-badge, .modal-icon, .exam-intro-icon, .subject-icon-box,
+  .dropzone-icon, .empty-state-icon, .lecture-dot {
+    display: none !important;
+  }
+
+  /* تصميم تايمر المذاكرة المنظم */
+  .study-timer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 4px;
+  }
+  .study-timer-display {
+    font-family: var(--font-en);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+  .study-timer-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .timer-select {
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+    background: var(--bg-card);
+    color: var(--text-main);
+    font-size: 0.76rem;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  .timer-btn {
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.74rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid var(--border-light);
+    background: var(--bg-card);
+    color: var(--text-main);
+    transition: var(--transition);
+  }
+  .timer-btn:hover {
+    background: var(--mint-soft);
+    color: var(--mint-700);
+  }
+  .timer-btn.active {
+    background: var(--rose-soft);
+    color: var(--rose-600);
+    border-color: var(--rose-border);
+  }
 </style></head>
 
 <body>
@@ -10251,17 +10352,23 @@
 
 
 
-              <div class="stat-card">
-
-                <div class="stat-icon rose"></div>
-
-                <div>
-
-                  <div class="stat-val">ساعتان</div>
-
-                  <div class="stat-lbl">الزمن المقترح</div>
-
+                            <div class="stat-card" id="lectureTimerCard">
+                <div class="study-timer-box">
+                  <div class="study-timer-display" id="studyTimerDisplay">25:00</div>
+                  <div class="study-timer-controls">
+                    <select class="timer-select" id="studyTimerDuration" onchange="changeTimerDuration(this.value)">
+                      <option value="15">15 دقيقة</option>
+                      <option value="25" selected>25 دقيقة (بومودورو)</option>
+                      <option value="30">30 دقيقة</option>
+                      <option value="45">45 دقيقة</option>
+                      <option value="60">ساعة</option>
+                      <option value="120">ساعتان</option>
+                    </select>
+                    <button class="timer-btn" id="studyTimerToggleBtn" onclick="toggleStudyTimer()">بدء</button>
+                    <button class="timer-btn" onclick="resetStudyTimer()">إعادة</button>
+                  </div>
                 </div>
+              </div>
 
               </div>
 
@@ -17694,7 +17801,74 @@ function handleDragLeave(e) {
 
   </script>
 
-</body>
+<script id="study-timer-logic">
+  let studyTimerInterval = null;
+  let studyTimerRemaining = 25 * 60;
+  let isStudyTimerRunning = false;
+
+  function updateTimerDisplay() {
+    const el = document.getElementById('studyTimerDisplay');
+    if (!el) return;
+    const m = Math.floor(studyTimerRemaining / 60);
+    const s = studyTimerRemaining % 60;
+    el.innerText = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  }
+
+  function changeTimerDuration(mins) {
+    pauseStudyTimer();
+    studyTimerRemaining = parseInt(mins, 10) * 60;
+    updateTimerDisplay();
+  }
+
+  function toggleStudyTimer() {
+    if (isStudyTimerRunning) {
+      pauseStudyTimer();
+    } else {
+      startStudyTimer();
+    }
+  }
+
+  function startStudyTimer() {
+    if (isStudyTimerRunning) return;
+    isStudyTimerRunning = true;
+    const btn = document.getElementById('studyTimerToggleBtn');
+    if (btn) { btn.innerText = 'إيقاف'; btn.classList.add('active'); }
+    
+    studyTimerInterval = setInterval(() => {
+      if (studyTimerRemaining > 0) {
+        studyTimerRemaining--;
+        updateTimerDisplay();
+      } else {
+        pauseStudyTimer();
+        if (typeof showToast === 'function') showToast('انتهى وقت المذاكرة المحدد!');
+        try {
+          const ctx = new (window.AudioContext || window.webkitAudioContext)();
+          const osc = ctx.createOscillator();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(587.33, ctx.currentTime);
+          osc.connect(ctx.destination);
+          osc.start();
+          osc.stop(ctx.currentTime + 0.6);
+        } catch(e) {}
+      }
+    }, 1000);
+  }
+
+  function pauseStudyTimer() {
+    isStudyTimerRunning = false;
+    clearInterval(studyTimerInterval);
+    const btn = document.getElementById('studyTimerToggleBtn');
+    if (btn) { btn.innerText = 'بدء'; btn.classList.remove('active'); }
+  }
+
+  function resetStudyTimer() {
+    pauseStudyTimer();
+    const sel = document.getElementById('studyTimerDuration');
+    const mins = sel ? parseInt(sel.value, 10) : 25;
+    studyTimerRemaining = mins * 60;
+    updateTimerDisplay();
+  }
+</script></body>
 
 </html>
 
