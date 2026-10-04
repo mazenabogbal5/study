@@ -10308,18 +10308,28 @@
           </li>
 
           <!-- 5. Human Physiology -->
-          <li class="subject-item" id="sidebarItem-PHY101">
+                    <li class="subject-item" id="sidebarItem-PHY101">
             <div class="subject-header" onclick="toggleSubjectTree(this)">
               <div class="subject-title-area">
                 <span>Human Physiology (PHY-101)</span>
               </div>
               <div class="subject-header-meta">
-                <span class="subject-badge disabled">0 محاضرات</span>
+                <span class="subject-badge">المحاضرة 1</span>
                 <div class="sidebar-toggle-arrow">▼</div>
               </div>
             </div>
             <ul class="sub-items-list">
-              <li class="no-lectures-sub-item">لا توجد محاضرات متاحة حالياً لهذا المقرر</li>
+              <li class="lecture-sub-item" id="sidebarPhyLec1Item" onclick="openLecture('phy101_lec1')">
+                <div class="lecture-item-content">
+                  <span class="lecture-dot"></span>
+                  <span>المحاضرة 1: فسيولوجيا الدم (Blood Physiology)</span>
+                </div>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </li>
+            </ul>
+          </li>
             </ul>
           </li>
 
@@ -11262,6 +11272,179 @@
 
           </div>
         </section>
+        <!-- ===================================================================
+             SECTION EXPLANATION: شرح المحاضرة التفصيلي (Blood Physiology)
+             =================================================================== -->
+        <div id="detailedExpBloodContainer" class="detailed-explanation-container" style="display: none;">
+          <!-- Card 1: مقدمة وخصائص الدم الفيزيائية -->
+          <div class="explanation-card highlight-card">
+            <div class="explanation-card-header">
+              <div>
+                <h4 class="exp-card-title">مقدمة وخصائص الدم الفيزيائية (Physical Properties & pH)</h4>
+                <span class="exp-card-tag">الشرائح 1 إلى 3: التعريف، الحجم، والوسط الحامضي</span>
+              </div>
+            </div>
+            <div class="explanation-card-body">
+              <p class="exp-lead">
+                الدم هو <strong>نسيج ضام سائل متخصص (Liquid connective tissue)</strong> يتكون من عناصر خلوية معلقة في سائل البلازما[cite: 1].
+              </p>
+              <div class="exp-points-box">
+                <div class="exp-box-title"> الخصائص الفيزيائية الأساسية للدم:</div>
+                <ul class="exp-list">
+                  <li><strong>حجم الدم:</strong> 5-6 لتر في الذكور، 4.5-5.5 لتر في الإناث (حوالي 8% من وزن الجسم).</li>
+                  <li><strong>درجة الحموضة (pH):</strong> قلوي خفيف (7.35 - 7.45) والمتوسط 7.4 بدقة متناهية.</li>
+                  <li><strong>اللزوجة والكثافة:</strong> أثقل من الماء بـ 3-5 أضعاف وكثافته النوعية 1.050 - 1.060.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: مكونات الدم والهيماتوكريت -->
+          <div class="explanation-card">
+            <div class="explanation-card-header">
+              <div>
+                <h4 class="exp-card-title">مكونات الدم وتحليل الهيماتوكريت (PCV / Hematocrit & Buffy Coat)</h4>
+                <span class="exp-card-tag">الشرائح 4 إلى 6: النسب المئوية والدلالة السريرية</span>
+              </div>
+            </div>
+            <div class="explanation-card-body">
+              <p class="exp-lead">
+                عند فصل الدم بالطرد المركزي ينقسم إلى: <strong>البلازما (55%)</strong> و<strong>العناصر الخلوية (45%)</strong>.
+              </p>
+              <ul class="exp-list grid-sub-list">
+                <li>
+                  <span class="exp-bullet-num">1</span>
+                  <div><strong>الهيماتوكريت (PCV):</strong> نسبة كرات الدم الحمراء لإجمالي حجم الدم (ذكور 47%، إناث 42%).</div>
+                </li>
+                <li>
+                  <span class="exp-bullet-num">2</span>
+                  <div><strong>الطبقة البيضاء (Buffy coat):</strong> شريط رقيق (<1%) بين البلازما والحمر يحتوي الكرات البيضاء والصفائح.</div>
+                </li>
+                <li>
+                  <span class="exp-bullet-num">3</span>
+                  <div><strong>دلالات الـ PCV:</strong> يرتفع في حالات كثرة الحمر (Polycythemia) والجفاف، وينخفض في الأنيميا والنزيف.</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3: الفرق بين البلازما والسيروم -->
+          <div class="explanation-card highlight-card">
+            <div class="explanation-card-header">
+              <div>
+                <h4 class="exp-card-title">البلازما ومصل الدم (Plasma vs Serum) ووظائف الدم</h4>
+                <span class="exp-card-tag">الشرائح 7 إلى 9: تركيب البلازما والفرق الحاسم مع السيروم</span>
+              </div>
+            </div>
+            <div class="explanation-card-body">
+              <div class="exp-focus-box">
+                <div class="exp-focus-title">🧪 المعادلة الذهبية لفرق السيروم:</div>
+                <p><strong>Serum = Plasma - (Fibrinogen + Clotting Factors II, V, VIII)</strong></p>
+                <p>البلازما مأخوذة بمانع تجلط وتحتفظ بالفيبرينوجين؛ بينما السيروم سائل معصور بعد اكتمال التجلط وخالي من الفيبرينوجين.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: بروتينات البلازما ووظائفها -->
+          <div class="explanation-card">
+            <div class="explanation-card-header">
+              <div>
+                <h4 class="exp-card-title">بروتينات البلازما ووظائفها (Plasma Proteins & Oncotic Pressure)</h4>
+                <span class="exp-card-tag">الشرائح 10 إلى 16: الألبيومين، الجلوبيولين، والضغط الأونكوتي</span>
+              </div>
+            </div>
+            <div class="explanation-card-body">
+              <div class="principles-grid">
+                <div class="principle-item">
+                  <span class="principle-badge">الألبيومين (Albumin)</span>
+                  <p>تركيزه 3.5-5.0 جم/ديسيلتر، مسؤول عن 80% من الضغط الأونكوتي (25 mmHg) لمنع الوذمة (Edema).</p>
+                </div>
+                <div class="principle-item">
+                  <span class="principle-badge">الجلوبيولين (Globulin)</span>
+                  <p>تركيزه 2.5-3.5 جم/ديسيلتر، يشمل ألفا وبيتا للنقل (الحديد والنحاس) وجاما للأجسام المضادة والدفاع.</p>
+                </div>
+                <div class="principle-item">
+                  <span class="principle-badge">الفيبرينوجين واللزوجة</span>
+                  <p>أساسي لتكوين خيوط التجلط، ويمنح الدم اللزوجة والمقاومة الهيدروليكية لحفظ ضغط الشرايين.</p>
+                </div>
+                <div class="principle-item">
+                  <span class="principle-badge">أماكن التصنيع</span>
+                  <p>الكبد يصنع جميع بروتينات البلازما، بينما تصنع خلايا البلازما اللمفاوية الجاما جلوبيولين فقط.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: كرات الدم الحمراء وتكوينها -->
+          <div class="explanation-card">
+            <div class="explanation-card-header">
+              <div>
+                <h4 class="exp-card-title">كرات الدم الحمراء وتخليق الدم (Erythrocytes & Erythropoiesis)</h4>
+                <span class="exp-card-tag">الشرائح 17 إلى 24: الأبعاد، الهرمون، ونقص الأكسجين</span>
+              </div>
+            </div>
+            <div class="explanation-card-body">
+              <ul class="exp-list">
+                <li><strong>الخصائص:</strong> قرص مقعر الوجهين (Biconcave) بقطر 7.2 µm وحجم MCV 90 FL خالٍ تماماً من العضيات والنواة[cite: 1].</li>
+                <li><strong>العمر والمصانع:</strong> تعيش 120 يوماً؛ تُصنع في الجنين بالكبد والطحال، وفي البالغين بنخاع العظام المسطحة فقط.</li>
+                <li><strong>المحفز والهرمون:</strong> نقص أكسجين الأنسجة (Hypoxia) يحفز إفراز الإريثروبويتين (EPO) بنسبة 85% من الكلى و 15% من الكبد.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 6: فسيولوجيا الحديد والفيتامينات والأنيميا -->
+          <div class="explanation-card highlight-card">
+            <div class="explanation-card-header">
+              <div>
+                <h4 class="exp-card-title">دورة الحديد، الفيتامينات، وأنواع الأنيميا (Iron, B12 & Anemias)</h4>
+                <span class="exp-card-tag">الشرائح 25 إلى 41: الامتصاص، النواقل، والاعتلالات الجينية</span>
+              </div>
+            </div>
+            <div class="explanation-card-body">
+              <div class="consequences-grid">
+                <div class="consequence-item">
+                  <div class="consequence-title">1. امتصاص الحديد (Fe++)</div>
+                  <p>يمتص حصراً في صورة ثنائية Fe++ بمساعدة حمض المعدة وفيتامين C، وتثبطه الفايتات والأوكسالات والفوسفات.</p>
+                </div>
+                <div class="consequence-item">
+                  <div class="consequence-title">2. الفيتامينات الأساسية</div>
+                  <p>حمض الفوليك ضروري لبناء DNA وانقسام الخلايا؛ وفيتامين B12 لبناء غلاف المايلين العصبي وتنشيط الفوليك.</p>
+                </div>
+                <div class="consequence-item">
+                  <div class="consequence-title">3. الأنيميا الخبيثة والحديد</div>
+                  <p>نقص الحديد يسبب أنيميا ميكروسيتيك باهتة؛ وغياب العامل الداخلي بالمعدة يسبب أنيميا خبيثة ماكروسيتيك بتلف عصبي.</p>
+                </div>
+                <div class="consequence-item">
+                  <div class="consequence-title">4. عيوب الهيموجلوبين الوراثية</div>
+                  <p>أنيميا الخلايا المنجلية: طفرة استبدال فالين بجلوتاميك في موقع 6 بسلسلة بيتا. الثلاسيميا: نقص كمي في سلاسل ألفا أو بيتا.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: تكسير الدم وأيض البيليروبين والصفراء -->
+          <div class="explanation-card warning-card">
+            <div class="explanation-card-header">
+              <div>
+                <h4 class="exp-card-title">تكسير الدم، أيض البيليروبين واليرقان (Bilirubin & Jaundice)</h4>
+                <span class="exp-card-tag">الشرائح 42 إلى 45: مقبرة الطحال، الصبغات، وأنواع اليرقان</span>
+              </div>
+            </div>
+            <div class="explanation-card-body">
+              <p class="exp-lead">
+                تتكسر كرات الدم الهرمة في <strong>الطحال (مقبرة الحمر)</strong>؛ يتحول الهيم إلى صبغة بيليفردين ثم بيليروبين غير مباشر سام ينقله الألبيومين للكبد ليقترن بحمض الجلوكورونيك.
+              </p>
+              <div class="exp-points-box">
+                <div class="exp-box-title"> أنواع اليرقان الثلاثة (عندما يتجاوز البيليروبين 2.0 - 2.5 mg/dl):</div>
+                <ul class="exp-list">
+                  <li><strong>صفراء تكسيرية (Hemolytic):</strong> فرط تكسير الدم وارتفاع البيليروبين غير المقترن (غير المباشر).</li>
+                  <li><strong>صفراء كبدية (Hepatocellular):</strong> تلف خلايا الكبد وارتفاع كلا النوعين المقترن وغير المقترن.</li>
+                  <li><strong>صفراء انسدادية (Obstructive):</strong> انسداد القناة المرارية بحصوة وارتفاع المباشر مع براز طباشيري شاحب وبول داكن.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
 <section id="section-files" class="lecture-content-section" style="display: none;">
 
@@ -18309,6 +18492,412 @@ function handleDragLeave(e) {
       return;
     }
     if (typeof _origDownloadFile === 'function') _origDownloadFile(fileId);
+  };
+</script><script id="blood-physiology-data-injection">
+  // بيانات مصطلحات فسيولوجيا الدم
+  const bloodTermsData = [
+    {"id": 4001, "en": "Liquid connective tissue", "ar": "نسيج ضام سائل وهو التصنيف النسيجي للدم (نسيج ضام سائل)"},
+    {"id": 4002, "en": "Formed elements", "ar": "خلايا الدم المعلقة في البلازما وتشمل الحمراء والبيضاء والصفائح (العناصر الخلوية)"},
+    {"id": 4003, "en": "Blood viscosity", "ar": "مقاومة الدم للجريان وهو أثقل من الماء بـ 3 إلى 5 أضعاف (لزوجة الدم)"},
+    {"id": 4004, "en": "Specific gravity", "ar": "كثافة الدم مقارنة بالماء وتتراوح بين 1.050 و 1.060 (الكثافة النوعية)"},
+    {"id": 4005, "en": "Blood pH", "ar": "درجة حموضة وقلوية الدم وهي قلوية خفيفة 7.35 إلى 7.45 (الرقم الهيدروجيني للدم)"},
+    {"id": 4006, "en": "Centrifugation", "ar": "فصل مكونات الدم بجهاز الطرد المركزي إلى بلازما وخلايا (طرد مركزي)"},
+    {"id": 4007, "en": "Packed Cell Volume (PCV)", "ar": "النسبة المئوية لحجم كرات الدم الحمراء لإجمالي حجم الدم (الهيماتوكريت)"},
+    {"id": 4008, "en": "Buffy coat", "ar": "شريط أبيض رفيع جداً بين البلازما والحمر يحتوي الكرات البيضاء والصفائح (الطبقة البيضاء)"},
+    {"id": 4009, "en": "Polycythemia", "ar": "زيادة مفرطة في عدد كرات الدم الحمراء ترفع لزوجة الدم (كثرة الحمر)"},
+    {"id": 4010, "en": "Hemodilution", "ar": "تخفيف الدم بزيادة السوائل مما يقلل نسبة الهيماتوكريت (تخفيف الدم)"},
+    {"id": 4011, "en": "Serum", "ar": "السائل الرائق المعصور بعد التجلط وهو خالي من الفيبرينوجين (مصل الدم)"},
+    {"id": 4012, "en": "Anticoagulant", "ar": "مادة كيميائية تمنع تجلط الدم للحصول على البلازما (مانع التجلط)"},
+    {"id": 4013, "en": "Homeostasis", "ar": "الحفاظ على ثبات البيئة الداخلية للجسم ودرجة الحرارة والحموضة (التوازن البدني)"},
+    {"id": 4014, "en": "Albumin", "ar": "أكثر بروتينات البلازما تركيزاً ومسؤول عن 80% من الضغط الأسموزي (الألبيومين)"},
+    {"id": 4015, "en": "Globulin", "ar": "بروتينات بلازمية مسؤولة عن المناعة ونقل الهرمونات والمعادن (الجلوبيولين)"},
+    {"id": 4016, "en": "A/G Ratio", "ar": "نسبة الألبيومين إلى الجلوبيولين وتتراوح طبيعياً بين 1.2 و 1.6 (نسبة A/G)"},
+    {"id": 4017, "en": "Colloid Osmotic Pressure", "ar": "الضغط الأونكوتي الذي يجذب الماء للأوعية ويمنع التورم وقيمته 25 مم زئبق (الضغط الأسموزي الغروي)"},
+    {"id": 4018, "en": "Edema", "ar": "تورم النسيج نتيجة ارتشاح الماء خارج الأوعية عند نقص الألبيومين (الوذمة / الاستسقاء)"},
+    {"id": 4019, "en": "Transferrin", "ar": "بروتين بيتا جلوبيولين ينقل الحديد بأمان في مجرى الدم (الترانسفيرين)"},
+    {"id": 4020, "en": "Ceruloplasmin", "ar": "بروتين ألفا 2 جلوبيولين يحمل النحاس في البلازما (السيرولوبلازمين)"},
+    {"id": 4021, "en": "Amphoteric buffer", "ar": "قدرة بروتينات الدم على معادلة الأحماض والقواعد لتثبيت الرقم الهيدروجيني (منظم مذبذب)"},
+    {"id": 4022, "en": "Erythrocytes", "ar": "الاسم العلمي لكرات الدم الحمراء الخالية من النواة والمخصصة للغازات (كرات الدم الحمراء)"},
+    {"id": 4023, "en": "Biconcave disc", "ar": "شكل قرصي مقعر الوجهين يعطي مرونة ويزيد مساحة تبادل الغازات (قرص مقعر الوجهين)"},
+    {"id": 4024, "en": "Spectrin and Actin", "ar": "بروتينات شبكية في غشاء كرات الدم الحمراء تمنحها المرونة للضغط (سبكترين وأكتين)"},
+    {"id": 4025, "en": "MCV", "ar": "متوسط حجم كرية الدم الحمراء وقيمته الطبيعية حوالي 90 فيمتولتر (حجم الكرية المتوسط)"},
+    {"id": 4026, "en": "Erythropoiesis", "ar": "عملية تخليق وإنتاج كرات الدم الحمراء في نخاع العظام (تكوين كرات الدم الحمراء)"},
+    {"id": 4027, "en": "Reticulocyte", "ar": "خلية دم حمراء شابة غير ناضجة تحتوي بقايا شبكية وتسبق الكرية الناضجة (الخلية الشبكية)"},
+    {"id": 4028, "en": "Extramedullary erythropoiesis", "ar": "إنتاج كرات الدم خارج النخاع في الكبد والطحال عند الطوارئ (تكوين الدم خارج النخاع)"},
+    {"id": 4029, "en": "Tissue Hypoxia", "ar": "نقص الأكسجين في الأنسجة وهو المحفز الفسيولوجي الأساسي لإنتاج الدم (نقص أكسجين الأنسجة)"},
+    {"id": 4030, "en": "Erythropoietin (EPO)", "ar": "هرمون سكري تفرز الكلى 85% منه لتحفيز نخاع العظم على إنتاج الحمر (الإريثروبويتين)"},
+    {"id": 4031, "en": "Protoporphyrin", "ar": "حلقة عضوية تتحد مع الحديد الثنائي لتكوين مجموعة الهيم (بروتوبورفيرين)"},
+    {"id": 4032, "en": "Ferrous iron (Fe++)", "ar": "الحديد في حالته الثنائية وهو الشكل الوحيد القابل للامتصاص ونقل الأكسجين (حديدوز ثنائي)"},
+    {"id": 4033, "en": "Ferritin", "ar": "مخزن الحديد الرئيسي في الكبد والطحال وخلايا الجسم (الفيريتين)"},
+    {"id": 4034, "en": "Gastroferritin", "ar": "بروتين في المعدة يربط الحديد وينقله إلى الأمعاء للامتصاص (جاستروفيريتين)"},
+    {"id": 4035, "en": "Mucosal block", "ar": "تشبع خلايا الأمعاء بالحديد لمنع امتصاص المزيد وتجنب التسمم (الحاجز المخاطي)"},
+    {"id": 4036, "en": "Intrinsic Factor (IF)", "ar": "بروتين تفرزه خلايا المعدة الجدارية لحماية وامتصاص فيتامين ب12 في اللفائفي (العامل الداخلي)"},
+    {"id": 4037, "en": "Oxyntic cells", "ar": "خلايا جدار المعدة المفرزة لحمض الهيدروكلوريك والعامل الداخلي (الخلايا الجدارية الحمضية)"},
+    {"id": 4038, "en": "Microcytic Hypochromic", "ar": "كرات دم حمراء صغيرة باهتة الصبغة وتحدث في أنيميا نقص الحديد (صغيرة شاحبة)"},
+    {"id": 4039, "en": "Pernicious Anemia", "ar": "أنيميا خبيثة ناتجة عن خلل مناعي يدمر خلايا المعدة فيمنع امتصاص B12 (الأنيميا الخبيثة)"},
+    {"id": 4040, "en": "Fetal Hemoglobin (HbF)", "ar": "هيموجلوبين الجنين ذو الشراهة العالية للأكسجين ويتكون من سلسلتي ألفا وجاما (هيموجلوبين الجنين)"},
+    {"id": 4041, "en": "Sickle Cell Anemia", "ar": "أنيميا منجلية سببها استبدال حمض الجلوتاميك بالفالين في موقع 6 بسلسلة بيتا (أنيميا الخلايا المنجلية)"},
+    {"id": 4042, "en": "Thalassemia", "ar": "مرض وراثي يسبب نقصاً كمياً في تصنيع سلاسل الجلوبين ألفا أو بيتا (أنيميا البحر المتوسط)"},
+    {"id": 4043, "en": "Unconjugated Bilirubin", "ar": "بيليروبين غير مباشر سام غير ذائب بالماء يُحمل على الألبيومين (بيليروبين غير مقترن)"},
+    {"id": 4044, "en": "Conjugated Bilirubin", "ar": "بيليروبين مباشر مقترن بحمض الجلوكورونيك يذوب بالماء ويفرز في الصفراء (بيليروبين مقترن)"},
+    {"id": 4045, "en": "Stercobilin & Urobilin", "ar": "نواتج أكسدة اليوروبيلينوجين المسؤولة عن تلوين البراز بالبني والبول بالأصفر (ستيركوبيلين ويوروبيلين)"}
+  ];
+
+  // بنك الأسئلة والأجوبة لفسيولوجيا الدم
+  const bloodQaData = [
+    {
+      "id": 4001,
+      "q": "What is the histological classification and primary composition of blood?",
+      "en": "Blood is a specialized liquid connective tissue consisting of formed elements (RBCs, WBCs, platelets) suspended in a liquid extracellular matrix called plasma.",
+      "ar": "(س: ما هو التصنيف النسيجي للدم وما هو تركيبه الأساسي؟ / ج: الدم عبارة عن نسيج ضام سائل متخصص يتكون من عناصر خلوية معلقة تشمل كرات الدم الحمراء والبيضاء والصفائح، تسبح جميعها في مادة خلالية سائلة تُسمى البلازما).",
+      "cat": "intro",
+      "cat_name": "مقدمة الدم والخصائص"
+    },
+    {
+      "id": 4002,
+      "q": "What are the normal physical properties of blood (volume, pH, viscosity, and specific gravity)?",
+      "en": "Volume: 5-6 L in adult males and 4.5-5.5 L in adult females (~8% of body weight). pH: Slightly alkaline (7.35-7.45, average 7.4). Viscosity: 3-5 times more viscous than water. Specific gravity: 1.050 to 1.060.",
+      "ar": "(س: ما هي الخصائص الفيزيائية الطبيعية للدم من حيث الحجم والحموضة واللزوجة والكثافة؟ / ج: الحجم: 5-6 لتر في الذكور و 4.5-5.5 لتر في الإناث ويمثل حوالي 8% من وزن الجسم. الرقم الهيدروجيني pH: قلوي خفيف بين 7.35 و 7.45 بمتوسط 7.4. اللزوجة: أثقل وألزج من الماء بـ 3-5 أضعاف. الكثافة النوعية: تتراوح بين 1.050 و 1.060).",
+      "cat": "intro",
+      "cat_name": "مقدمة الدم والخصائص"
+    },
+    {
+      "id": 4003,
+      "q": "Define Packed Cell Volume (PCV) / Hematocrit, mention its normal values, and the composition of the buffy coat?",
+      "en": "PCV is the percentage of total blood volume occupied by erythrocytes after centrifugation. Normal values: Males 42%-52% (average 47%), Females 37%-47% (average 42%). The buffy coat is a thin layer (<1%) between plasma and RBCs containing leukocytes and platelets.",
+      "ar": "(س: عرّف حجم الخلايا المكدسة (PCV / Hematocrit) واذكر قيمه الطبيعية ومكونات الطبقة البيضاء؟ / ج: هو النسبة المئوية التي تشغلها كرات الدم الحمراء من إجمالي حجم الدم بعد الطرد المركزي. النسب الطبيعية: الذكور 42%-52% بمتوسط 47%، الإناث 37%-47% بمتوسط 42%. الطبقة البيضاء (Buffy coat) شريط رفيع يمثل أقل من 1% يحتوي الكرات البيضاء والصفائح).",
+      "cat": "pcv",
+      "cat_name": "الهيماتوكريت والبلازما"
+    },
+    {
+      "id": 4004,
+      "q": "What is the clinical significance of increased and decreased PCV?",
+      "en": "Increased PCV occurs in Polycythemia (true increase in RBC count) and Dehydration (loss of plasma volume). Decreased PCV occurs in Anemia, severe Hemorrhage, and Hemodilution.",
+      "ar": "(س: ما هي الأهمية والدلالة السريرية لارتفاع وانخفاض قيمة الهيماتوكريت (PCV)؟ / ج: يرتفع الـ PCV في حالات كثرة الحمر (Polycythemia) وفي الجفاف (Dehydration) لنقص البلازما؛ بينما ينخفض في حالات فقر الدم (Anemia)، النزيف الحاد، وزيادة تخفيف الدم بالسوائل).",
+      "cat": "pcv",
+      "cat_name": "الهيماتوكريت والبلازما"
+    },
+    {
+      "id": 4005,
+      "q": "Differentiate precisely between Plasma and Serum?",
+      "en": "Plasma is the fluid portion of unclotted blood containing fibrinogen and all clotting factors (requires an anticoagulant). Serum is the clear fluid expressed after blood clots: Serum = Plasma - (Fibrinogen + Factors II, V, VIII).",
+      "ar": "(س: ما هو الفرق الدقيق بين بلازما الدم ومصل الدم (السيروم)؟ / ج: البلازما هي الجزء السائل من الدم غير المتجلط المحتوي على الفيبرينوجين وجميع عوامل التجلط ويشترط استخدام مانع تجلط لفصله. أما السيروم فهو السائل المعصور بعد حدوث التجلط ولا يحتوي على الفيبرينوجين وعوامل التجلط 2 و 5 و 8 المستهلكة في الجلطة).",
+      "cat": "pcv",
+      "cat_name": "الهيماتوكريت والبلازما"
+    },
+    {
+      "id": 4006,
+      "q": "What are the major types, normal concentrations, and A/G ratio of plasma proteins?",
+      "en": "Total plasma proteins: 6-8 g/dl (average 7.4 g/dl). Albumin: 3.5-5.0 g/dl. Globulin: 2.5-3.5 g/dl. Fibrinogen: 0.2-0.4 g/dl (200-400 mg/dl). Prothrombin: 10-15 mg/dl. Normal A/G ratio is 1.2 to 1.6 : 1.",
+      "ar": "(س: ما هي الأنواع الرئيسية لبروتينات البلازما وتراكيزها ونسبة الألبيومين للجلوبيولين (A/G)؟ / ج: الإجمالي 6-8 جم/ديسيلتر. الألبيومين 3.5-5.0 جم/ديسيلتر. الجلوبيولين 2.5-3.5 جم/ديسيلتر. الفيبرينوجين 200-400 مجم/ديسيلتر. البروثرومبين 10-15 مجم/ديسيلتر. ونسبة A/G الطبيعية هي 1.2 إلى 1.6 : 1).",
+      "cat": "proteins",
+      "cat_name": "بروتينات البلازما"
+    },
+    {
+      "id": 4007,
+      "q": "Where are plasma proteins synthesized in the human body?",
+      "en": "The Liver synthesizes ALL plasma proteins (Albumin, Fibrinogen, Prothrombin, Alpha and Beta globulins). Plasma cells in lymphoid tissue synthesize Gamma globulins (antibodies).",
+      "ar": "(س: أين يتم تصنيع وتخليق بروتينات البلازما في جسم الإنسان؟ / ج: يقوم الكبد بتصنيع جميع بروتينات البلازما بلا استثناء (الألبيومين، الفيبرينوجين، البروثرومبين، وألفا وبيتا جلوبيولين). بينما تصنع خلايا البلازما (Plasma cells) في الأنسجة اللمفاوية الجاما جلوبيولين فقط (الأجسام المضادة)).",
+      "cat": "proteins",
+      "cat_name": "بروتينات البلازما"
+    },
+    {
+      "id": 4008,
+      "q": "Explain the physiological significance of Colloid Osmotic (Oncotic) Pressure and the role of Albumin?",
+      "en": "Colloid osmotic pressure (~25 mmHg) draws fluid from interstitial spaces into capillaries, preventing edema. Albumin accounts for ~80% of this pressure due to its high plasma concentration and lower molecular weight.",
+      "ar": "(س: اشرح الأهمية الفسيولوجية للضغط الأسموزي الغروي (الأونكوتي) ودور الألبيومين فيه؟ / ج: يبلغ هذا الضغط حوالي 25 مم زئبق ووظيفته سحب السوائل من المسافات بين الخلايا لداخل الشعيرات ومنع الاستسقاء أو الوذمة (Edema). والألبيومين مسؤول عن 80% من هذا الضغط بسبب تركيزه العالي وصغر وزنه الجزيئي مقارنة بباقي البروتينات).",
+      "cat": "proteins",
+      "cat_name": "بروتينات البلازما"
+    },
+    {
+      "id": 4009,
+      "q": "Describe the shape, dimensions, and normal count of Red Blood Cells (Erythrocytes)?",
+      "en": "Shape: Biconcave non-nucleated disc providing high surface-area-to-volume ratio and deformability. Diameter: 7.2 µm. Volume (MCV): 80-95 FL (average 90 FL). Count: Males 4.8-5.8 million/mm³, Females 4.2-5.2 million/mm³. Life span: 120 days.",
+      "ar": "(س: صف شكل وأبعاد والعدد الطبيعي وعمر كرات الدم الحمراء؟ / ج: الشكل: قرص مقعر الوجهين غير منوى يزيد من مساحة التبادل الغازي ومرونة المرور بالشعيرات. القطر: 7.2 ميكروميتر. الحجم MCV: متوسط 90 فيمتولتر. العدد: 4.8-5.8 مليون/مم³ بالذكور، 4.2-5.2 مليون/مم³ بالإناث. العمر الافتراضي: 120 يوماً).",
+      "cat": "rbcs",
+      "cat_name": "كرات الدم الحمراء والتكوين"
+    },
+    {
+      "id": 4010,
+      "q": "Outline the stages of Erythropoiesis and the sites of hemopoiesis according to age?",
+      "en": "Stages: Stem cell -> Proerythroblast -> Early -> Intermediate -> Late Normoblast (nucleus ejected) -> Reticulocyte -> Erythrocyte. Sites: Fetus (Liver & Spleen), Baby (All bone marrow), Adult (Flat bones marrow).",
+      "ar": "(س: اذكر مراحل تكوين كرات الدم الحمراء وأماكن تصنيعها حسب عمر الإنسان؟ / ج: المراحل: خلية جذعية $\leftarrow$ طليعة الأرومة $\leftarrow$ أرومة مبكرة $\leftarrow$ متوسطة $\leftarrow$ متأخرة (تطرد النواة) $\leftarrow$ خلية شبكية $\leftarrow$ كرية ناضجة. الأماكن: في الجنين (الكبد والطحال)، في الرضيع (نخاع جميع العظام)، في البالغ (نخاع العظام المسطحة كالجمجمة والقص والضلوع والحوض)).",
+      "cat": "rbcs",
+      "cat_name": "كرات الدم الحمراء والتكوين"
+    },
+    {
+      "id": 4011,
+      "q": "What is the primary stimulus for erythropoiesis and what is Erythropoietin (EPO)?",
+      "en": "Tissue Hypoxia is the principal stimulus. Erythropoietin is a glycoprotein secreted 85% by the kidneys and 10-15% by the liver that stimulates stem cell conversion to proerythroblasts and accelerates Hb synthesis.",
+      "ar": "(س: ما هو المنبه الفسيولوجي الأساسي لتصنيع الدم وما هو هرمون الإريثروبويتين؟ / ج: نقص أكسجين الأنسجة (Tissue Hypoxia) هو المنبه الوحيد المباشر. وهرمون الإريثروبويتين بروتين سكري تفرز الكلى 85% منه والكبد 10-15% لتحفيز انقسام الخلايا الجذعية وتسريع بناء الهيموجلوبين في نخاع العظام).",
+      "cat": "rbcs",
+      "cat_name": "كرات الدم الحمراء والتكوين"
+    },
+    {
+      "id": 4012,
+      "q": "Describe the structure of Hemoglobin and the valence state of Iron required for gas transport?",
+      "en": "Hemoglobin consists of Globin (4 polypeptide chains: 2 pairs) and 4 Heme groups. Each heme is Protoporphyrin bound to Iron in the Ferrous state (Fe++), which reversibly binds oxygen.",
+      "ar": "(س: صف تركيب جزيء الهيموجلوبين والحالة التكافئية للحديد اللازمة لنقل الغازات؟ / ج: يتكون الهيموجلوبين من بروتين الجلوبين (4 سلاسل ببتيدية على شكل زوجين) و 4 مجموعات هيم. وتحتوي كل مجموعة هيم على حلقة بروتوبورفيرين بداخلها ذرة حديد في حالتها الثنائية الحديدوز (Fe++) وهي الوحيدة القادرة على ربط الأكسجين وحمله وعكسه).",
+      "cat": "iron",
+      "cat_name": "الحديد والفيتامينات"
+    },
+    {
+      "id": 4013,
+      "q": "How is iron distributed in the body, and what is the best clinical test for iron stores?",
+      "en": "Total iron is 3-5 g: 65-75% in Hemoglobin (~3 g), 20% stored as Ferritin in liver and spleen, remainder in myoglobin/enzymes and Transferrin (3-4 mg). Serum Ferritin is the most accurate test for iron stores.",
+      "ar": "(س: كيف يتوزع الحديد في جسم الإنسان وما هو أفضل تحليل معملي لتقييم مخزون الحديد؟ / ج: إجمالي الحديد 3-5 جرام: 65-75% بالهيموجلوبين (حوالي 3 جم)، 20% مخزون في صورة فيريتين (Ferritin) بالكبد والطحال، والباقي في المايوجلوبين وترانسفيرين الدم. ويعد قياس فيريتين المصل (Serum Ferritin) أدق تحليل لمخزون الحديد).",
+      "cat": "iron",
+      "cat_name": "الحديد والفيتامينات"
+    },
+    {
+      "id": 4014,
+      "q": "What factors promote and inhibit iron absorption in the intestine?",
+      "en": "Absorbed exclusively as Ferrous (Fe++) in duodenum. Promoters: Gastric HCl and Vitamin C (reduce Fe3+ to Fe2+). Inhibitors: Phytic acid (grains), Oxalates (tea/spinach), and Phosphates (dairy/cola), which form insoluble salts.",
+      "ar": "(س: ما هي العوامل التي تعزز وتثبط امتصاص الحديد في الأمعاء الدقيقة؟ / ج: يمتص الحديد حصراً في صورته الثنائية (Fe++) في الاثني عشر. العوامل المحفزة: حمض المعدة HCl وفيتامين C لاختزال الحديد الثلاثي لثنائي. العوامل المثبطة: الفايتات (الحبوب)، الأوكسالات (الشاي والسبانخ)، والفوسفات (الألبان والمشروبات الغازية) لأنها ترسب أملاحاً غير قابلة للامتصاص).",
+      "cat": "iron",
+      "cat_name": "الحديد والفيتامينات"
+    },
+    {
+      "id": 4015,
+      "q": "Name the four specific iron-binding proteins and their physiological locations?",
+      "en": "1. Gastroferritin: Binds iron in stomach and delivers it to intestine. 2. Transferrin: Beta-globulin transporting iron in blood (35% saturated). 3. Ferritin: Storage iron in liver and tissues. 4. Apoferritin: Unbound protein shell that binds iron to form ferritin.",
+      "ar": "(س: اذكر البروتينات الأربعة المرتبطة بالحديد وموقع عمل كل منها في الجسم؟ / ج: 1- جاستروفيريتين (Gastroferritin): ناقل المعدة الذي يسلم الحديد للأمعاء. 2- ترانسفيرين (Transferrin): تاكسي الدم وهو بيتا جلوبيولين يحمل الحديد (مشبع بنسبة 35%). 3- فيريتين (Ferritin): مخزن الحديد في الكبد والأنسجة. 4- أبوفيريتين (Apoferritin): البروتين غير المرتبط الذي يتحد بالحديد ليتحول لفيريتين).",
+      "cat": "iron",
+      "cat_name": "الحديد والفيتامينات"
+    },
+    {
+      "id": 4016,
+      "q": "Compare between the roles of Folic Acid and Vitamin B12 in erythropoiesis?",
+      "en": "Folic acid (B9) synthesizes pyrimidines/thymine for DNA and cell division. Vitamin B12 (Cyanocobalamin) is found ONLY in animal products, activates folic acid, forms myelin, and requires gastric Intrinsic Factor (from oxyntic cells) for absorption in the ileum.",
+      "ar": "(س: قارن بين دور حمض الفوليك وفيتامين ب12 في تكوين كرات الدم الحمراء؟ / ج: حمض الفوليك (B9) يصنع قواعد الثايمين اللازمة للـ DNA وانقسام الخلايا. فيتامين B12 يوجد فقط في المصادر الحيوانية، وينشط الفوليك أسيد، ويبني غلاف المايلين للأعصاب، ويتطلب وجود العامل الداخلي (Intrinsic Factor) من خلايا المعدة الجدارية لامتصاصه في اللفائفي).",
+      "cat": "iron",
+      "cat_name": "الحديد والفيتامينات"
+    },
+    {
+      "id": 4017,
+      "q": "Differentiate between Iron Deficiency Anemia, Megaloblastic Anemia, and Pernicious Anemia?",
+      "en": "Iron deficiency anemia is Microcytic Hypochromic (low MCV, low MCHC). Megaloblastic anemia is Macrocytic (high MCV >100 FL) due to B12 or folate deficiency. Pernicious anemia is autoimmune destruction of gastric oxyntic cells leading to lack of IF, severe B12 deficiency, and irreversible neurological damage.",
+      "ar": "(س: قارن سريرياً ومخبرياً بين أنيميا نقص الحديد، أنيميا تضخم الأرومات، والأنيميا الخبيثة؟ / ج: أنيميا نقص الحديد خلاياها صغيرة شاحبة (Microcytic Hypochromic). أنيميا تضخم الأرومات خلاياها كبيرة (Macrocytic) بارتفاع MCV لأكثر من 100 فيمتولتر لنقص B12 أو الفوليك. والأنيميا الخبيثة ناتجة عن تدمير مناعي لخلايا المعدة وغياب العامل الداخلي فتسبب أنيميا ضخمة مصحوبة بتلف وأعراض عصبية شديدة).",
+      "cat": "anemia",
+      "cat_name": "أنواع الأنيميا والاعتلالات"
+    },
+    {
+      "id": 4018,
+      "q": "Contrast the structural and genetic basis of Sickle Cell Anemia versus Thalassemia?",
+      "en": "Sickle cell anemia (HbS) is a qualitative defect: point mutation where Valine replaces Glutamic acid at position 6 of the beta-globin chain. Thalassemia is a quantitative defect: reduced rate of synthesis of normal alpha or beta globin chains.",
+      "ar": "(س: قارن بين الأساس الجيني والتركيبي لأنيميا الخلايا المنجلية ومرض الثلاسيميا؟ / ج: أنيميا الخلايا المنجلية طفرة نوعية يتم فيها استبدال حمض الجلوتاميك بالفالين في الموقع رقم 6 على سلسلة بيتا وتتحول الخلايا لشكل المنجل بنقص الأكسجين. أما الثلاسيميا فهي خلل وراثي كمي في معدل إنتاج سلاسل الجلوبين الطبيعية (نقص كمية سلاسل ألفا أو بيتا)).",
+      "cat": "anemia",
+      "cat_name": "أنواع الأنيميا والاعتلالات"
+    },
+    {
+      "id": 4019,
+      "q": "Describe the catabolism of Hemoglobin and the conversion of Heme to Bilirubin?",
+      "en": "RBCs are destroyed after 120 days in the spleen (graveyard). Globin is broken into amino acids. Iron is recycled to transferrin/ferritin. Porphyrin is converted to Biliverdin (green), then reduced to Bilirubin (yellow) which enters blood bound to Albumin.",
+      "ar": "(س: صف خطوات تكسير الهيموجلوبين وكيف تتحول مجموعة الهيم إلى صبغة البيليروبين؟ / ج: تتحلل الكرات الهرمة بعد 120 يوماً في مقبرة الطحال. يُعاد تدوير بروتين الجلوبين لأحماض أمينية، ويُحفظ الحديد في الفيريتين. وتتحول حلقة البورفيرين عبر إنزيم هيم أكسيجينيز إلى صبغة بيليفردين الخضراء ثم تُختزل إلى صبغة البيليروبين الصفراء غير الذائبة في الماء والمحولة للكبد على الألبيومين).",
+      "cat": "jaundice",
+      "cat_name": "الصفراء وتكسير الدم"
+    },
+    {
+      "id": 4020,
+      "q": "Differentiate between the three main clinical types of Jaundice (Hemolytic, Hepatocellular, and Obstructive)?",
+      "en": "Appears when bilirubin >2-2.5 mg/dl. 1. Hemolytic (Pre-hepatic): Excess RBC lysis, elevated unconjugated bilirubin. 2. Hepatocellular (Hepatic): Liver cell injury, elevation of both conjugated and unconjugated bilirubin. 3. Obstructive (Post-hepatic): Bile duct blockage, elevated conjugated bilirubin with pale clay-colored stool and dark urine.",
+      "ar": "(س: قارن بين الأنواع الثلاثة لمرض الصفراء / اليرقان (التكسيرية، الكبدية، والانسدادية)؟ / ج: يظهر اليرقان سريرياً بتجاوز البيليروبين 2.0-2.5 مجم/ديسيلتر. 1- تكسيرية: ناتجة عن فرط تكسير الدم ويرتفع بها البيليروبين غير المباشر (غير المقترن). 2- كبدية: ناتجة عن التهاب خلايا الكبد ويرتفع بها النوعان معاً. 3- انسدادية: ناتجة عن انسداد القناة المرارية بحصوة ويرتفع بها البيليروبين المباشر المقترن وتتميز ببراز شاحب طباشيري وبول داكن كالشاوي).",
+      "cat": "jaundice",
+      "cat_name": "الصفراء وتكسير الدم"
+    }
+  ];
+
+  // بنك أسئلة الامتحان التقييمي (MCQ)
+  const bloodExamData = [
+    {
+      "id": 4001,
+      "q": "Blood is classified histologically as which type of tissue?\n a. Epithelial tissue\n b. Liquid connective tissue\n c. Muscular tissue\n d. Nervous tissue",
+      "en": "Correct Answer: b. Liquid connective tissue",
+      "ar": "الإجابة الصحيحة: (b) نسيج ضام سائل (Liquid connective tissue). الدم نسيج ضام لأن خلاياه معلقة في مادة خلالية سائلة تسمى البلازما."
+    },
+    {
+      "id": 4002,
+      "q": "What is the average physiological pH of arterial blood?\n a. 7.00\n b. 7.20\n c. 7.40\n d. 7.60",
+      "en": "Correct Answer: c. 7.40",
+      "ar": "الإجابة الصحيحة: (c) 7.40. الرقم الهيدروجيني الطبيعي للدم قلوي خفيف ويتراوح بين 7.35 و 7.45."
+    },
+    {
+      "id": 4003,
+      "q": "The normal average Packed Cell Volume (PCV) in healthy adult males is approximately:\n a. 35%\n b. 42%\n c. 47%\n d. 58%",
+      "en": "Correct Answer: c. 47%",
+      "ar": "الإجابة الصحيحة: (c) 47%. المعدل الطبيعي للـ PCV في الذكور يتراوح بين 42%-52% بمتوسط 47%، وفي الإناث بمتوسط 42%."
+    },
+    {
+      "id": 4004,
+      "q": "The thin 'buffy coat' layer observed after centrifugation of uncoagulated blood consists of:\n a. Red blood cells only\n b. Plasma proteins only\n c. Platelets and leukocytes\n d. Pure fibrin threads",
+      "en": "Correct Answer: c. Platelets and leukocytes",
+      "ar": "الإجابة الصحيحة: (c) الصفائح وخلايا الدم البيضاء (Platelets and leukocytes)، وتمثل طبقة رقيقة جداً أقل من 1% فوق كرات الدم الحمراء."
+    },
+    {
+      "id": 4005,
+      "q": "Serum differs from plasma in that serum lacks:\n a. Albumin\n b. Fibrinogen\n c. Sodium ions\n d. Water",
+      "en": "Correct Answer: b. Fibrinogen",
+      "ar": "الإجابة الصحيحة: (b) الفيبرينوجين (Fibrinogen). معادلة مصل الدم: Serum = Plasma - Fibrinogen وعوامل التجلط المستهلكة."
+    },
+    {
+      "id": 4006,
+      "q": "Which plasma protein is primarily responsible for maintaining ~80% of Colloid Osmotic Pressure?\n a. Fibrinogen\n b. Alpha-1 globulin\n c. Albumin\n d. Gamma globulin",
+      "en": "Correct Answer: c. Albumin",
+      "ar": "الإجابة الصحيحة: (c) الألبيومين (Albumin). نظراً لتركيزه العالي (حوالي 4.5 جم/ديسيلتر) وصغر حجمه الجزيئي فهو المسؤول الأساسي عن منع الارتشاح والوذمة."
+    },
+    {
+      "id": 4007,
+      "q": "Gamma globulins (antibodies) are uniquely synthesized by which of the following cells?\n a. Hepatocytes\n b. Plasma cells\n c. Endothelial cells\n d. Osteoblasts",
+      "en": "Correct Answer: b. Plasma cells",
+      "ar": "الإجابة الصحيحة: (b) خلايا البلازما (Plasma cells). الكبد يصنع جميع بروتينات الدم باستثناء الجاما جلوبيولين التي تصنعها خلايا البلازما المناعية في النسيج اللمفاوي."
+    },
+    {
+      "id": 4008,
+      "q": "The normal average lifespan of a human erythrocyte in circulation is:\n a. 30 days\n b. 60 days\n c. 120 days\n d. 365 days",
+      "en": "Correct Answer: c. 120 days",
+      "ar": "الإجابة الصحيحة: (c) 120 يوماً (أربعة أشهر تقريباً)، ثم تبتلعها وتكسرها خلايا الطحال والكبد."
+    },
+    {
+      "id": 4009,
+      "q": "In healthy adults, normal hemopoiesis is confined exclusively to the red marrow of:\n a. All long and short bones\n b. Flat bones (skull, sternum, ribs, pelvis)\n c. Spleen and liver only\n d. Yellow marrow of extremities",
+      "en": "Correct Answer: b. Flat bones",
+      "ar": "الإجابة الصحيحة: (b) العظام المسطحة (Flat bones) كالقص والجمجمة والضلوع وعظام الحوض."
+    },
+    {
+      "id": 4010,
+      "q": "The principal physiological stimulus that directly triggers erythropoietin secretion is:\n a. High blood pressure\n b. Tissue hypoxia\n c. Dehydration\n d. High plasma iron levels",
+      "en": "Correct Answer: b. Tissue hypoxia",
+      "ar": "الإجابة الصحيحة: (b) نقص أكسجين الأنسجة (Tissue hypoxia) هو المحفز الفسيولوجي الأساسي لكليتي الإنسان لإفراز الإريثروبويتين."
+    },
+    {
+      "id": 4011,
+      "q": "Iron is absorbed across the duodenal mucosa exclusively in which oxidation state?\n a. Ferric state (Fe+++)\n b. Ferrous state (Fe++)\n c. Elemental iron (Fe0)\n d. Ferritin complex",
+      "en": "Correct Answer: b. Ferrous state (Fe++)",
+      "ar": "الإجابة الصحيحة: (b) الحالة الثنائية الحديدوز (Fe++). ولهذا يساعد حمض المعدة وفيتامين C على اختزال الحديد الثلاثي إلى ثنائي لامتصاصه."
+    },
+    {
+      "id": 4012,
+      "q": "The major transport beta-globulin for iron in blood plasma is called:\n a. Ferritin\n b. Gastroferritin\n c. Transferrin\n d. Apoferritin",
+      "en": "Correct Answer: c. Transferrin",
+      "ar": "الإجابة الصحيحة: (c) الترانسفيرين (Transferrin). وهو مشبع بالحديد طبيعياً بنسبة تقارب 35%."
+    },
+    {
+      "id": 4013,
+      "q": "Pernicious anemia is caused by the autoimmune destruction of which gastric cells?\n a. Chief cells\n b. Mucous neck cells\n c. Oxyntic / Parietal cells\n d. G cells",
+      "en": "Correct Answer: c. Oxyntic / Parietal cells",
+      "ar": "الإجابة الصحيحة: (c) الخلايا الجدارية الحمضية (Oxyntic cells)، مما يؤدي لغياب العامل الداخلي وفشل امتصاص فيتامين B12 وحدوث تلف عصبي."
+    },
+    {
+      "id": 4014,
+      "q": "Sickle cell anemia is caused by the substitution of Glutamic acid with which amino acid at position 6 of the beta-globin chain?\n a. Lysine\n b. Valine\n c. Leucine\n d. Alanine",
+      "en": "Correct Answer: b. Valine",
+      "ar": "الإجابة الصحيحة: (b) الفالين (Valine). استبدال الجلوتاميك بالفالين يجعل الهيموجلوبين يتبلور في نقص الأكسجين ليأخذ شكل المنجل."
+    },
+    {
+      "id": 4015,
+      "q": "Obstructive (post-hepatic) jaundice is clinically characterized by:\n a. Markedly elevated unconjugated bilirubin only\n b. Elevated conjugated bilirubin with pale clay-colored stools\n c. Decreased reticulocyte count only\n d. Absence of urobilinogen in stool and urine",
+      "en": "Correct Answer: b. Elevated conjugated bilirubin with pale clay-colored stools",
+      "ar": "الإجابة الصحيحة: (b) ارتفاع البيليروبين المباشر المقترن مع براز طباشيري شاحب (Clay-colored stools) وبول داكن نتيجة انسداد القنوات المرارية."
+    }
+  ];
+
+  // تفعيل تبديل البيانات حسب المحاضرة النشطة
+  const _origGetActiveTerms = window.getActiveTerms;
+  window.getActiveTerms = function() {
+    if (state.activeLectureId === 'phy101_lec1') return bloodTermsData;
+    return _origGetActiveTerms();
+  };
+
+  const _origGetActiveQa = window.getActiveQa;
+  window.getActiveQa = function() {
+    if (state.activeLectureId === 'phy101_lec1') return bloodQaData;
+    return _origGetActiveQa();
+  };
+
+  const _origGetActiveExam = window.getActiveExam;
+  window.getActiveExam = function() {
+    if (state.activeLectureId === 'phy101_lec1') return bloodExamData;
+    return _origGetActiveExam();
+  };
+</script><script id="subject-patch-for-blood">
+  // إضافة فسيولوجيا الدم لمقررات المنصة
+  subjectsDataMap['phy101'] = {
+    code: 'PHY-101',
+    titleAr: 'علم وظائف الأعضاء البشري',
+    titleEn: 'Human Physiology',
+    lectures: [
+      {
+        id: 'phy101_lec1',
+        num: '1',
+        title: 'فسيولوجيا الدم (الشرائح 1 إلى 45)',
+        subtitle: 'Blood Physiology - General Properties & Erythrocytes'
+      }
+    ]
+  };
+
+  // التحكم في ظهور تبويب "شرح المحاضرة التفصيلي"
+  const _origOpenLectureImpl = window.openLecture;
+  window.openLecture = function(lecId, pushState = true) {
+    if (typeof _origOpenLectureImpl === 'function') _origOpenLectureImpl(lecId, pushState);
+
+    const detailedTabBtn = document.getElementById('tabBtnDetailedExplanation');
+    const socioExp = document.querySelector('#section-explanation .detailed-explanation-container');
+    const bloodExp = document.getElementById('detailedExpBloodContainer');
+
+    if (lecId === 'socio_lec1') {
+      if (detailedTabBtn) detailedTabBtn.style.display = 'inline-flex';
+      if (socioExp) socioExp.style.display = 'flex';
+      if (bloodExp) bloodExp.style.display = 'none';
+    } else if (lecId === 'phy101_lec1') {
+      if (detailedTabBtn) detailedTabBtn.style.display = 'inline-flex';
+      if (socioExp) socioExp.style.display = 'none';
+      if (bloodExp) bloodExp.style.display = 'flex';
+    } else {
+      if (detailedTabBtn) detailedTabBtn.style.display = 'none';
+      if (socioExp) socioExp.style.display = 'none';
+      if (bloodExp) bloodExp.style.display = 'none';
+    }
+
+    // تحديث العناوين والشارات للمحاضرة النشطة
+    if (lecId === 'phy101_lec1') {
+      const heroTitle = document.querySelector('.lecture-hero .hero-title');
+      if (heroTitle) {
+        heroTitle.innerHTML = 'فسيولوجيا الدم <span class="en-sub">Blood Physiology</span>';
+      }
+      const crumbSubj = document.getElementById('crumbSubject');
+      const crumbLec = document.getElementById('crumbLecture');
+      if (crumbSubj) { crumbSubj.innerText = 'Human Physiology (PHY-101)'; crumbSubj.style.display = 'inline'; }
+      if (crumbLec) { crumbLec.innerText = 'المحاضرة 1: فسيولوجيا الدم'; crumbLec.style.display = 'inline'; }
+      const heroBadge = document.querySelector('.hero-badge.badge-pathology');
+      if (heroBadge) heroBadge.innerText = '🩸 Human Physiology (PHY-101)';
+    }
+
+    // إعادة رسم المصطلحات والأسئلة والامتحان
+    if (typeof renderTermsTable === 'function') renderTermsTable();
+    if (typeof renderQAAccordions === 'function') renderQAAccordions();
+    if (typeof renderExamCards === 'function') renderExamCards();
+    if (typeof updateProgressDisplay === 'function') updateProgressDisplay();
+    if (typeof updateFlashcardDisplay === 'function') updateFlashcardDisplay();
+  };
+
+  // ربط عرض قسم الشرح في switchSection
+  const _origSwitchSectionImpl = window.switchSection;
+  window.switchSection = function(secId) {
+    if (typeof _origSwitchSectionImpl === 'function') _origSwitchSectionImpl(secId);
+    const socioExp = document.querySelector('#section-explanation .detailed-explanation-container');
+    const bloodExp = document.getElementById('detailedExpBloodContainer');
+    const expSection = document.getElementById('section-explanation');
+
+    if (secId === 'section-explanation') {
+      if (expSection) expSection.style.display = 'block';
+      if (state.activeLectureId === 'phy101_lec1') {
+        if (bloodExp) bloodExp.style.display = 'flex';
+        if (socioExp) socioExp.style.display = 'none';
+      } else if (state.activeLectureId === 'socio_lec1') {
+        if (bloodExp) bloodExp.style.display = 'none';
+        if (socioExp) socioExp.style.display = 'flex';
+      }
+    }
   };
 </script></body>
 
