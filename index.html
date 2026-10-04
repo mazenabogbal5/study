@@ -9916,7 +9916,22 @@
   .dropzone-icon, .empty-state-icon, .lecture-dot {
     display: none !important;
   }
-</style></head>
+</style><style id="permanent-view-leak-shield">
+  #home-view #detailedExpBloodContainer,
+  #subject-overview-view #detailedExpBloodContainer,
+  #home-view .detailed-explanation-container,
+  #subject-overview-view .detailed-explanation-container,
+  body:not(.in-lecture-view) #detailedExpBloodContainer,
+  body:not(.in-lecture-view) .detailed-explanation-container,
+  body:not(.in-lecture-view) #lecture-view {
+    display: none !important;
+  }
+  #lecture-view.show-all #detailedExpBloodContainer,
+  #lecture-view.show-all #section-explanation {
+    display: none !important;
+  }
+</style>
+</head>
 
 <body>
 
@@ -11271,6 +11286,1179 @@
             </div>
 
           </div>
+<div id="detailedExpBloodContainer" class="detailed-explanation-container" style="display: none;">
+    <!-- Slide 1 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 1 (Slide 1): مقدمة الدم (Introduction to Blood)</h4>
+          <span class="exp-card-tag">التصنيف النسيجي للدم</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Blood is a specialized liquid connective tissue consisting of formed elements suspended in a fluid matrix called plasma.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>الدم هو نسيج ضام سائل متخصص يتكون من عناصر خلوية معلقة في مادة خلالية سائلة تُسمى البلازما.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الدم مش مجرد مية أو سائل عادي، تصنيفه النسيجي في الجسم إنه نسيج ضام زي الغضاريف والعظام بس في صورة سائلة، وبيتكون من جزئين: سائل شغال بحر اسمه البلازما، وعايم جواه الخلايا (حمرا، بيضا، صفائح).</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Blood tissue type: Liquid connective tissue.<br>• Main components: Formed elements + Plasma.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 2 (Slide 2): الخصائص الفيزيائية للدم (Physical Properties of Blood)</h4>
+          <span class="exp-card-tag">الحجم، اللون، اللزوجة، والكثافة</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Blood volume: 5-6 liters in adult males, 4.5-5.5 liters in adult females (about 7-8% of body weight).<br>Color: Bright red in arteries (oxygenated), dark red in veins (deoxygenated).<br>Viscosity: 3-5 times more viscous than water.<br>Specific gravity: 1.050 - 1.060.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>حجم الدم: 5-6 لتر في الذكور البالغين، 4.5-5.5 لتر في الإناث البالغات (حوالي 7-8% من وزن الجسم). اللون: أحمر فاتح في الشرايين (مؤكسج)، أحمر داكن في الأوردة (غير مؤكسج). اللزوجة: أكثر لزوجة من الماء بمقدار 3-5 أضعاف. الكثافة النوعية: 1.050 - 1.060.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الدم بيمثل حوالي 8% من وزن جسمك؛ الرجالة عندهم كمية دم أكبر عشان كتلتهم العضلية أكبر وهرمون التستوستيرون. لونه في الشرايين أحمر فاتح ومزهزه عشان مليان أكسجين، وفي الأوردة غامق ومكتوم. دمه أتقل وألزج من المية بـ 3 لـ 5 مرات بسبب البروتينات والخلايا.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Volume: 5-6 L in males (~8% of body weight).<br>• Viscosity: 3-5 times of water.<br>• Specific gravity: 1.050 - 1.060.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 3 (Slide 3): درجة الحموضة (Blood pH & Homeostasis)</h4>
+          <span class="exp-card-tag">ثبات البيئة الداخلية للـ pH</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Blood pH is slightly alkaline: 7.35 - 7.45 (average 7.4).<br>Maintained strictly by buffer systems, respiratory system, and kidneys.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>الرقم الهيدروجيني للدم قلوي خفيف: 7.35 - 7.45 (المتوسط 7.4). يتم الحفاظ عليه بدقة عبر أجهزة التنظيم الكيميائية (Buffers)، والجهاز التنفسي، والكليتين.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الدم قلوي خفيف ورقم 7.4 ده مقدس في الفسيولوجي؛ لو قل عن 7.35 الجسم يدخل في حموضة (Acidosis)، ولو زاد عن 7.45 يدخل في قلوية (Alkalosis)، وأي خلل يهدد الحياة لأن كل إنزيمات الجسم بتقف.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Normal pH range: 7.35 - 7.45.<br>• Average pH: 7.4 (Slightly alkaline).
+        </div>
+      </div>
+    </div>
+    <!-- Slide 4 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 4 (Slide 4): مكونات الدم ونسبتها (Composition of Blood)</h4>
+          <span class="exp-card-tag">نسب البلازما والخلايا</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Blood separates upon centrifugation into:<br>- Plasma: 55% of total blood volume.<br>- Formed elements (cells): 45% of total blood volume.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>ينفصل الدم عند وضعه في جهاز الطرد المركزي إلى:<br>- البلازما: 55% من إجمالي حجم الدم.<br>- العناصر الخلوية (الخلايا): 45% من إجمالي حجم الدم.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>لما تاخد عينة دم وتلفها في السنترفيوج (Centrifuge)، الدم هيفصل نصين مش متساويين؛ البلازما السائلة هتعوم فوق وتاخد أكتر من النص (55%)، والخلايا التقيلة هترقد تحت وتاخد الباقي (45%).</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Plasma percentage: 55%.<br>• Formed elements percentage: 45%.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 5 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 5 (Slide 5): حجم الخلايا المكدسة (Hematocrit / PCV)</h4>
+          <span class="exp-card-tag">الـ PCV وشريط الـ Buffy Coat</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Packed Cell Volume (PCV) or Hematocrit: The percentage of RBCs in the total blood volume.<br>Normal values: Males 42% - 52% (average 47%), Females 37% - 47% (average 42%).<br>Buffy coat: A thin layer between plasma and RBCs (&lt;1%) containing leukocytes and platelets.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>حجم الخلايا المكدسة (PCV) أو الهيماتوكريت: هو النسبة المئوية التي تشغلها كرات الدم الحمراء من إجمالي حجم الدم.<br>النسب الطبيعية: الذكور 42%-52% (متوسط 47%)، الإناث 37%-47% (متوسط 42%).<br>الطبقة البيضاء (Buffy coat): طبقة رقيقة جداً بين البلازما والـ RBCs تمثل أقل من 1% وتحتوي على كرات الدم البيضاء والصفائح الدموية.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>تحليل الـ PCV هو نسبة كرات الدم الحمراء المترسبة بعد الطرد المركزي؛ قيمته في الرجالة متوسطها 47%، والستات 42%. وفي شريط أبيض فاصل ورفيع جداً عامل زي القشطة اسمه Buffy coat فيه كرات الدم البيضاء والصفائح.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • PCV definition: % of RBCs to total blood volume.<br>• Normal PCV: Male ~47%, Female ~42%.<br>• Buffy coat: WBCs + Platelets (&lt;1%).
+        </div>
+      </div>
+    </div>
+    <!-- Slide 6 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 6 (Slide 6): أهمية تحليل الهيماتوكريت الإكلينيكية (Clinical Significance of PCV)</h4>
+          <span class="exp-card-tag">دلالات الارتفاع والانخفاض</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Increased PCV (Polycythemia): Due to increased RBC count or decreased plasma volume (dehydration).<br>Decreased PCV: In cases of anemia, severe hemorrhage, or hemodilution.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>زيادة الـ PCV (كثرة الحمر Polycythemia): نتيجة زيادة كرات الدم الحمراء أو نقص حجم البلازما (الجفاف).<br>نقص الـ PCV: في حالات الأنيميا، النزيف الشديد، أو زيادة تخفيف الدم بالسوائل.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>بنعرف إيه من تحليل الـ PCV؟ لو رقمه عالي فوق الـ 55% يبقى إما دم المريض كثيف وخلاياه كتيرة جداً (Polycythemia)، أو إنه فاقد مية وعنده جفاف (Dehydration). ولو رقمه واطي تحت الـ 35% يبقى المريض عنده أنيميا أو بينزف.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • ↑ PCV: Polycythemia, Dehydration.<br>• ↓ PCV: Anemia, Hemorrhage.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 7 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 7 (Slide 7): تركيب بلازما الدم (Plasma Composition)</h4>
+          <span class="exp-card-tag">الماء والأملاح والمواد العضوية</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Water: 90 - 92%.<br>Solids: 8 - 10% (Organic: Plasma proteins 6-8 g/dl, glucose, lipids, amino acids, urea; Inorganic: Na+, K+, Ca2+, Cl-, HCO3- ~1%).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>الماء: 90 - 92%.<br>المواد الصلبة: 8 - 10% (مواد عضوية: بروتينات البلازما 6-8 جم/ديسيلتر، جلوكوز، دهون، أحماض أمينية، هرمونات، ويوريا؛ مواد غير عضوية: أملاح وشوارد تمثل حوالي 1%).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>البلازما أصلها مية (أكتر من 90%)، والـ 8-10% الباقيين هما المواد الدايبة؛ وأكتر حاجة دايبة فيها هي بروتينات البلازما (بتمثل 7 لـ 8 جرام لكل ديسيلتر).</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Plasma water: 90 - 92%.<br>• Plasma solids: 8 - 10%.<br>• Organic majority: Plasma proteins (6-8 g/dl).
+        </div>
+      </div>
+    </div>
+    <!-- Slide 8 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 8 (Slide 8): الفرق بين البلازما والسيروم (Plasma vs Serum)</h4>
+          <span class="exp-card-tag">المعادلة الإكلينيكية للسيروم</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Plasma: The fluid portion of unclotted blood containing fibrinogen and all clotting factors (needs anticoagulant).<br>Serum = Plasma - (Fibrinogen + Clotting Factors II, V, VIII).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>البلازما: هي الجزء السائل من الدم غير المتجلط، وتحتوي على الفيبرينوجين وجميع عوامل التجلط (نحصل عليها باستخدام مانع تجلط).<br>السيروم (المصل): هو السائل الرائق الذي ينفصل بعد حدوث تجلط الدم:<br>السيروم = بلازما ناقص (الفيبرينوجين + عوامل التجلط 2 و 5 و 8 المستهلكة في التجلط).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>سؤال امتحان أزلي: إيه الفرق بين البلازما والسيروم؟ البلازما بنحط في الأنبوبة مانع تجلط فبتفضل محتفظة بالفيبرينوجين وكل عوامل التجلط. السيروم بنسيب الدم يتجلط براحته، فالجلطة تاكل الفيبرينوجين، ويتبقى السائل المعصور ده اسمه سيروم (خالي من الفيبرينوجين).</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Serum formula: Plasma minus Fibrinogen.<br>• Plasma contains: All clotting factors (Needs Anticoagulant).
+        </div>
+      </div>
+    </div>
+    <!-- Slide 9 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 9 (Slide 9): الوظائف العامة للدم (General Functions of Blood)</h4>
+          <span class="exp-card-tag">النقل، التوازن، والحماية</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          1. Transport: Nutrients, gases (O2, CO2), wastes, hormones, enzymes.<br>2. Homeostasis: Regulation of body temperature, pH, fluid balance.<br>3. Protection: Immunity against pathogens (WBCs and antibodies) and Hemostasis (platelets & clotting).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>1. النقل: العناصر الغذائية، الغازات، الفضلات، الهرمونات، والإنزيمات.<br>2. الحفاظ على التوازن البيئي الداخلي (Homeostasis): تنظيم درجة حرارة الجسم، درجة الحموضة، وتوازن السوائل.<br>3. الحماية والدفاع: المناعة ومقاومة الأمراض ومنع النزيف وتخثر الدم.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الدم شغال دليفري بينقل أكسجين وغذاء لكل الأنسجة، وشغال تكييف ومنظم حرارة بيوزع السخونية، وشغال دفاع وجيش مناعي عشان يقتل الميكروبات، وفرقة طوارئ تقفل النزيف.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Primary functions: Transport, Homeostasis, Protection.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 10 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 10 (Slide 10): أنواع بروتينات البلازما (Types of Plasma Proteins)</h4>
+          <span class="exp-card-tag">التراكيز الطبيعية لبروتينات البلازما</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Total plasma proteins: 6 - 8 g/dl (average 7.4 g/dl).<br>Albumin: 3.5 - 5.0 g/dl.<br>Globulin: 2.5 - 3.5 g/dl.<br>Fibrinogen: 0.2 - 0.4 g/dl (200-400 mg/dl).<br>Prothrombin: 10 - 15 mg/dl.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>إجمالي بروتينات البلازما: 6 - 8 جم/ديسيلتر (المتوسط 7.4 جم/ديسيلتر).<br>التراكيز: الألبيومين (3.5-5.0 جم/ديسيلتر)، الجلوبيولين (2.5-3.5 جم/ديسيلتر)، الفيبرينوجين (200-400 مجم/ديسيلتر)، البروثرومبين (10-15 مجم/ديسيلتر).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الرقم الإجمالي لبروتينات الدم بيتحفظ زي الاسم: من 6 لـ 8 جرام. نصيب الأسد للألبيومين (حوالي 4 جرام)، ويليه الجلوبيولين (حوالي 3 جرام)، وبعدهم الفايبرينوجين بتاع الجلطات بكمية صغيرة جداً بالملليجرام.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Total protein: 6-8 g/dl.<br>• Albumin level: 3.5 - 5 g/dl.<br>• Fibrinogen level: 0.2 - 0.4 g/dl.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 11 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 11 (Slide 11): نسبة الألبيومين إلى الجلوبيولين (A/G Ratio)</h4>
+          <span class="exp-card-tag">القيمة والدلالة السريرية للنسبة</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          A/G Ratio: Albumin / Globulin ratio = 1.2 to 1.6 : 1.<br>Clinical value: Decreased A/G ratio occurs in liver disease (decreased albumin), kidney disease (albumin loss in urine), or chronic infections (increased globulin).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>نسبة A/G: نسبة الألبيومين للجلوبيولين تتراوح بين 1.2 إلى 1.6 : 1.<br>الأهمية الإكلينيكية: تنخفض هذه النسبة في أمراض الكبد (نقص تصنيع الألبيومين)، أمراض الكلى (تسرب الألبيومين في البول)، أو العدوى المزمنة (زيادة تصنيع الجلوبيولين المناعي).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>بما إن الألبيومين أكتر من الجلوبيولين، فناتج قسمتهم على بعض لازم يطلع أكتر من 1 (من 1.2 لـ 1.6). لو النسبة دي قلت أو اتقلبت، ده معناه إن الألبيومين وقع بسبب فشل في الكبد، أو الكلى بتسربه في البول، أو الجلوبيولين زاد جداً بسبب ميكروب مزمن.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Normal A/G ratio: 1.2 - 1.6 : 1.<br>• Causes of ↓ A/G ratio: Liver disease, Nephrotic syndrome, Chronic infection.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 12 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 12 (Slide 12): أماكن تصنيع بروتينات البلازما (Origin of Plasma Proteins)</h4>
+          <span class="exp-card-tag">الكبد وخلايا البلازما اللمفاوية</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Liver: Synthesizes ALL plasma proteins (Albumin, Fibrinogen, Prothrombin, Alpha and Beta globulins).<br>Plasma cells: Synthesize Gamma globulins (Immunoglobulins/antibodies) in lymphoid tissue.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>الكبد: يصنع جميع بروتينات البلازما بلا استثناء (الألبيومين، الفيبرينوجين، البروثرومبين، وألفا وبيتا جلوبيولين).<br>خلايا البلازما (Plasma cells): تصنع الجاما جلوبيولين (الأجسام المضادة) داخل الأنسجة اللمفاوية.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>قاعدة امتحان مشهورة جداً: الكبد هو المصنع لكل بروتينات الدم، باستثناء حاجة واحدة بس: الجاما جلوبيولين (Gamma globulin)، لأن دي أجسام مضادة بتصنعها الخلايا الليمفاوية المناعية (Plasma cells).</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Site of Albumin/Fibrinogen synthesis: Liver only.<br>• Site of Gamma globulin synthesis: Plasma cells in lymphoid tissue.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 13 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 13 (Slide 13): الضغط الإسموزي الغروي (Colloid Osmotic / Oncotic Pressure)</h4>
+          <span class="exp-card-tag">دور الألبيومين ومنع التورم</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Colloid Osmotic Pressure: Approximately 25 mmHg.<br>Generated mainly by Albumin (~80% of total oncotic pressure) due to high concentration and small molecular weight.<br>Function: Draws fluid from tissue spaces back into capillaries, preventing edema.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>الضغط الإسموزي الغروي (الأونكوتي): قيمته حوالي 25 مم زئبق.<br>يتولد بشكل أساسي بواسطة الألبيومين (مسؤول عن حوالي 80% منه) نظراً لتركيزه العالي وصغر وزنه الجزيئي.<br>الوظيفة: سحب السوائل من المسافات بين الخلايا إلى داخل الشعيرات الدموية، مما يمنع حدوث التورم أو الوذمة (Edema).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الألبيومين عامل زي الإسفنجة اللي بتمص المية وتخليها جوة مجرى الدم بضغط قيمته 25 مم زئبق. لو الألبيومين قل في الجسم، المية تسيب الدم وترشح في الأنسجة وتحت الجلد، ورجل العيان تورم وتعمل استسقاء ووذمة (Edema).</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Normal oncotic pressure: 25 mmHg.<br>• Main protein responsible: Albumin (80%).<br>• Hypoalbuminemia result: Edema.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 14 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 14 (Slide 14): وظيفة التجلط واللزوجة لبروتينات البلازما (Coagulation & Viscosity)</h4>
+          <span class="exp-card-tag">الفيبرينوجين والجلوبيولين وضغط الدم</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Blood Coagulation: Fibrinogen and Prothrombin are essential clotting factors converted into fibrin threads.<br>Viscosity: Contributed mainly by Fibrinogen and Globulins due to their asymmetrical shape and large size, maintaining arterial blood pressure.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>تجلط الدم: الفيبرينوجين والبروثرومبين من عوامل التجلط الأساسية التي تتحول إلى خيوط فيبرين صلبة لسد جدران الأوعية الممزقة.<br>اللزوجة: يساهم فيها بشكل رئيسي الفيبرينوجين والجلوبيولين بسبب شكلهما غير المتناسق وحجمهما الجزيئي الكبير، مما يحافظ على ضغط الدم الشرياني.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الفيبرينوجين هو شبكة الصيد اللي بتعمل الجلطة وتوقف النزيف؛ وبما إنه جزيء طويل وعريض وغير متماثل، فهو والجلوبيولين بيدوا الدم اللزوجة والمقاومة اللي بتخلي القلب لما يضخ الدم ضغطه يفضل مظبوط في الشرايين.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Clotting proteins: Fibrinogen, Prothrombin.<br>• Viscosity proteins: Fibrinogen and Globulin.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 15 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 15 (Slide 15): وظيفة الدفاع والنقل (Defense & Transport Functions)</h4>
+          <span class="exp-card-tag">الأجسام المضادة ونواقل المعادن والهرمونات</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Defense Function: Gamma globulins act as antibodies targeting toxins and microorganisms.<br>Transport Function:<br>- Albumin transports: Free fatty acids, unconjugated bilirubin, drugs, Calcium.<br>- Globulins transport: Lipids, thyroid hormones, iron (Transferrin), copper (Ceruloplasmin).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>وظيفة الدفاع: تعمل جاما جلوبيولين كأجسام مضادة تستهدف السموم والميكروبات.<br>وظيفة النقل:<br>- الألبيومين ينقل: الأحماض الدهنية الحرة، البيليروبين غير المباشر، الأدوية، والكالسيوم.<br>- الجلوبيولين ينقل: الدهون، هرمونات الغدة الدرقية، الحديد (بواسطة الترانسفيرين)، والنحاس (بواسطة السيرولوبلازمين).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>بروتينات البلازما تاكسيات ماشية في الدم: الألبيومين بيشيل البيليروبين والأدوية، والجلوبيولين بيشيل الحديد على تاكسي اسمه (Transferrin)، وبيشيل النحاس على تاكسي اسمه (Ceruloplasmin)، والجاما جلوبيولين هي الأجسام المضادة اللي بتحارب العدوى.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Antibodies nature: Gamma globulins.<br>• Iron carrier: Transferrin (Beta globulin).<br>• Copper carrier: Ceruloplasmin (Alpha-2 globulin).
+        </div>
+      </div>
+    </div>
+    <!-- Slide 16 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 16 (Slide 16): وظيفة التنظيم الغذائي والـ Buffer (Buffer & Reserve Functions)</h4>
+          <span class="exp-card-tag">الخاصية المذبذبة للبروتينات ومخزون الأحماض الأمينية</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Buffering Action: Plasma proteins act as amphoteric buffers contributing ~15% of blood buffering capacity.<br>Protein Reserve: Can be utilized by tissues during prolonged starvation as a source of amino acids.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>العمل كمنظم للحموضة (Buffer): تتصرف بروتينات البلازما كمواد مذبذبة تعادل الأحماض والقلويات وتسهم بنحو 15% من قدرة الدم على تنظيم الـ pH.<br>مخزون بروتيني: يمكن للأنسجة استهلاكها وتكسيرها لأحماض أمينية في حالات المجاعة الشديدة والصيام الطويل.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>بروتينات البلازما عندها خاصية مرنة؛ لو الدم حمضي تتصرف كقاعدة، ولو الدم قلوي تتصرف كحمض عشان ترجع الدم لرقم 7.4. ولو الإنسان بيموت من الجوع، الجسم يقدر يسحب منها ويكسرها عشان يغذي الأعضاء الحيوية.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Buffering capacity: ~15% by plasma proteins.<br>• Amphoteric nature: Binds H+ or OH-.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 17 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 17 (Slide 17): كرات الدم الحمراء (RBCs Overview)</h4>
+          <span class="exp-card-tag">التخصص الخلوي وغياب العضيات</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Red Blood Cells (RBCs) or Erythrocytes: Highly specialized cells for oxygen and carbon dioxide transport.<br>Lack all cell organelles including nucleus, mitochondria, and endoplasmic reticulum.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>خلايا الدم الحمراء (الإريثروسايتس): خلايا عالية التخصص لنقل الأكسجين وثاني أكسيد الكربون.<br>تفتقر لجميع العضيات الخلوية بما فيها النواة، الميتوكوندريا، والشبكة الإندوبلازمية.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>كرات الدم الحمراء دي كبسولات متخصصة لحاجة واحدة بس: نقل الغازات. معندهاش أي نواة ولا ميتوكوندريا، وده لسببين: تفضي مكان للهيموجلوبين، ومتستهلكش الأكسجين اللي هي شايلاه لنفسها!</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Scientific name: Erythrocytes.<br>• Organelles: Absent (No nucleus, no mitochondria).
+        </div>
+      </div>
+    </div>
+    <!-- Slide 18 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 18 (Slide 18): شكل وأبعاد كرات الدم الحمراء (RBCs Structure & Dimensions)</h4>
+          <span class="exp-card-tag">الشكل المقعر والقطر والـ MCV</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Shape: Flat Biconcave disc, non-nucleated, elastic framework (Spectrin and Actin).<br>Diameter: 7.2 µm.<br>Thickness: 2.2 µm at periphery, 1.0 µm at center.<br>Volume (MCV): 80 - 95 FL, average 90 FL.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>الشكل: قرص مقعر الوجهين مسطح غير منواة، وذات هيكل بروتيني مرن من ألياف السبكترين والأكتين.<br>الأبعاد: القطر: 7.2 ميكروميتر، السمك: 2.2 ميكروميتر عند الأطراف، و 1.0 ميكروميتر بالمركز، الحجم (MCV): 80-95 فيمتولتر، بمتوسط 90 فيمتولتر.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>شكل كرات الدم الحمراء مقعر من الناحيتين زي القرص المحفور، وده بيديها ميزتين: بيزود مساحة السطح لتبادل الغازات، وبيخليها مرنة تتنى وتعدي في أضيق الشعيرات من غير ما تتكسر. حجمها الطبيعي 90 فيمتولتر وقطرها 7.2 ميكروميتر.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Shape: Biconcave disc (surface area & flexibility).<br>• Diameter: 7.2 µm.<br>• Mean Corpuscular Volume (MCV): 90 FL.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 19 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 19 (Slide 19): عدد كرات الدم وعمرها الافتراضي (RBCs Count, Life Span & Functions)</h4>
+          <span class="exp-card-tag">العدد والعمر الافتراضي لكرات الدم</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Normal Count: Males 4.8 - 5.8 million/mm³ (average 5.2 million); Females 4.2 - 5.2 million/mm³ (average 4.7 million).<br>Life Span: 120 days (~4 months).<br>Functions: Gas transport via Hemoglobin, Acid-base buffer, Blood typing (ABO and Rh).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>العدد الطبيعي: في الذكور 4.8 - 5.8 مليون/مم³، في الإناث 4.2 - 5.2 مليون/مم³.<br>العمر الافتراضي: 120 يوماً (حوالي 4 أشهر).<br>الوظائف: نقل الغازات، تنظيم حموضة الدم عبر الهيموجلوبين، وتحديد فصائل الدم بفضل المستقبلات السطحية.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>كرات الدم الحمراء بتعيش 120 يوم بالظبط وبعدها بتعجز وتتكسر في الطحال. عددها في الرجالة أكتر عشان التستوستيرون، وفي الستات أقل عشان الفقد في الطمث وهرمون الإستروجين.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Life span: 120 days (4 months).<br>• Male count: 5.0 - 5.5 million/mm³.<br>• Female count: 4.5 - 5.0 million/mm³.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 20 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 20 (Slide 20): مراحل تكوين كرات الدم (Erythropoiesis Stages)</h4>
+          <span class="exp-card-tag">مراحل تخليق كرات الدم الحمراء والخلايا الشبكية</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Stages: Stem cell -> Proerythroblast -> Early Normoblast -> Intermediate Normoblast -> Late Normoblast -> Reticulocytes -> Erythrocytes.<br>Key events: Phase 1: Ribosome synthesis; Phase 2: Hemoglobin accumulation; Phase 3: Ejection of nucleus (in late normoblast stage).<br>Rapid RBC production leads to ↑ Reticulocytes in circulation.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>مراحل تطور كرات الدم الحمراء: الخلية الجذعية ← طليعة الأرومة ← أرومة مبكرة ← أرومة متوسطة ← أرومة متأخرة ← خلية شبكية ← كرية ناضجة.<br>الأحداث الأساسية: بناء الريبوسومات، تراكم الهيموجلوبين، وطرد النواة في مرحلة الأرومة المتأخرة.<br>زيادة إنتاج الدم السريع يؤدي لزيادة الخلايا الشبكية في الدورة الدموية.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>احفظ التسلسل ده للامتحان: بنبدأ بخلية جذعية، ثم Proerythroblast، ثم Normoblast اللي بيتصنع فيها الهيموجلوبين وتطرد النواة برة، ثم تطلع خلية شابة اسمها Reticulocyte تقعد يومين وتتحول لـ RBC كاملة. لو المريض نزف، تلاقي الـ Reticulocytes زادت جداً في تحليله!</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Nucleus ejection stage: Late Normoblast.<br>• Immediate precursor of RBC: Reticulocyte.<br>• ↑ Reticulocytes: Marker of rapid erythropoiesis.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 21 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 21 (Slide 21): أماكن تصنيع الدم حسب العمر (Sites of Hemopoiesis)</h4>
+          <span class="exp-card-tag">أماكن تصنيع الدم في الجنين والأطفال والبالغين</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Sites: Fetus: Liver and spleen; Baby: Bone marrow of ALL bones; Adult: Bone marrow of FLAT bones (skull, iliac bones, sternum, ribs, scapula).<br>Extramedullary erythropoiesis: Formation of RBCs outside the bone marrow, mainly in the liver and spleen.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>أماكن التكوين: الجنين (الكبد والطحال)، الرضيع (نخاع جميع العظام)، البالغ (نخاع العظام المسطحة كعظام الجمجمة والقص والضلوع والحوض ولوح الكتف).<br>التكوين خارج النخاع (Extramedullary): تصنيع كرات الدم خارج النخاع العظمي في الكبد والطحال عند زيادة حاجة الجسم للدم أو عجز النخاع.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>مصانع الدم بتتغير مع العمر: في بطن أمك كبد وطحال، بعد الولادة كل عظام جسمك، ولما تكبر العظام الطويلة بتتعطل ويفضل بس العظام المسطحة (Flat bones) زي القفص الصدري والجمجمة والحوض. لو النخاع اتدمر، الكبد والطحال يرجعوا يشتغلوا تاني كطوارئ.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Fetus: Liver & Spleen.<br>• Baby: All bones.<br>• Adults: Flat bones only.<br>• Extramedullary site: Liver & Spleen.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 22 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 22 (Slide 22): المؤثر الفسيولوجي الأولي للإنتاج (Primary Stimulus for Erythropoiesis)</h4>
+          <span class="exp-card-tag">نقص أكسجين الأنسجة</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Tissue Hypoxia (low oxygen delivery to tissues) is the principal physiological stimulus for erythropoiesis.<br>Causes of hypoxia: High altitude, hemorrhage, anemia, pulmonary disease, cardiac failure.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>نقص أكسجين الأنسجة (Hypoxia) هو المحفز الفسيولوجي الأساسي والوحيد لعملية تكوين كرات الدم الحمراء.<br>أسباب نقص الأكسجين: الأماكن المرتفعة، النزيف، الأنيميا، أمراض الرئة، وهبوط عضلة القلب.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الجسم مبيحسش بعدد كرات الدم مباشرة؛ الجسم بيحس بالأكسجين اللي واصل للأنسجة. لو نقص الأكسجين (Hypoxia) لأي سبب (زي النزيف أو لما تطلع جبل عالي)، جرس الإنذار يضرب فوراً لزيادة الإنتاج.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Major stimulus: Tissue Hypoxia.<br>• Trigger conditions: High altitude, Anemia, Hypoxemia.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 23 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 23 (Slide 23): العوامل المؤثرة على التكوين (Factors Affecting Erythropoiesis)</h4>
+          <span class="exp-card-tag">العوامل الأساسية والهرمونات</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          A - Control: Erythropoietin.<br>B - Substances essential to Erythropoiesis: 1. Proteins and amino acids, 2. Iron, 3. Folic acid & Vitamin B12, 4. Trace elements, 5. Hormones, 6. Healthy bone marrow, 7. Healthy liver.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>أ - تنظيم وتحفيز التكوين: هرمون الإريثروبويتين.<br>ب - المواد الأساسية اللازمة للعملية: 1- البروتينات والأحماض الأمينية، 2- الحديد، 3- حمض الفوليك وفيتامين ب12، 4- العناصر النادرة، 5- الهرمونات، 6- نخاع عظم سليم، 7- كبد سليم.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>عشان المصنع يشتغل محتاج: مدير ينظم الشغل (هرمون الإريثروبويتين)، مواد خام (بروتين وحديد)، فيتامينات انقسام (ب12 وفوليك)، معادن مساعدة وهرمونات، وورشة ومخزن شغالين تمام (نخاع عظم وكبد).</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Main hormone: Erythropoietin.<br>• Maturation factors: Vit B12 & Folic acid.<br>• Synthesis essentials: Proteins & Iron.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 24 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 24 (Slide 24): هرمون الإريثروبويتين (Erythropoietin Details)</h4>
+          <span class="exp-card-tag">إفراز الكلى والكبد والوظائف الحيوية</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Glycoprotein present in plasma in low concentration. Secreted mainly by the Kidneys (85%), and about 10-15% by the Liver.<br>Triggered by renal tissue hypoxia.<br>Functions: Stimulates stem cells to convert into proerythroblasts, stimulates RNA and protein synthesis, accelerates hemoglobin synthesis and release of reticulocytes.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>بروتين سكري موجود بالبلازما بتركيز منخفض. يُفرز أساساً من الكليتين (85%)، وحوالي 10-15% بواسطة الكبد.<br>ينشط بتأثير إنزيم كلوي يُسمى إريثروجينين عند نقص الأكسجين.<br>وظائفه: تحويل الخلايا الجذعية لطليعة الأرومة، تحفيز تخليق الـ RNA والبروتين، وتسريع تصنيع الهيموجلوبين.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الهرمون الأهم على الإطلاق: بيطلع بنسبة 85% من الكلى و 15% من الكبد؛ بيروح لنخاع العظم ويحوله من وضع الخمول لأقصى طاقة إنتاج، مرضى الفشل الكلوي بيعانوا من أنيميا قاسية لأن الكلى مش بتفرز الهرمون ده.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Kidney contribution: 85%.<br>• Liver contribution: 10-15%.<br>• Target cell: Stem cell -> Proerythroblast.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 25 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 25 (Slide 25): دور البروتين والحديد في الهيموجلوبين (Proteins & Iron in Hb)</h4>
+          <span class="exp-card-tag">تركيب الهيم والحديدوز الثنائي</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          1- Proteins and amino acids: High biological value proteins are required to build the globin part of Hb. Low intake causes nutritional anemia.<br>2- Iron: Essential for Hb synthesis.<br>Structure: Hemoglobin molecule consists of Protoporphyrin containing iron in the Ferrous state (Fe++) & globin consisting of 2 pairs of polypeptides.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>1- البروتينات: مطلوبة ذات قيمة حيوية عالية لبناء جزء الجلوبين من الهيموجلوبين؛ ونقصها يسبب أنيميا.<br>2- الحديد: أساسي لتخليق الهيموجلوبين.<br>التركيب: يتكون جزيء الهيموجلوبين من بروتوبورفيرين يحتوي على حديد ثنائي التكافؤ (حديدوز Fe++) وجلوبين مكون من زوجين من سلاسل الببتيد.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الهيموجلوبين = حديد ثنائي (Fe++) راكب جوة حلقة اسمها Protoporphyrin + بروتين الجلوبين (أربع سلاسل). لازم بروتين عالي الجودة ولازم الحديد يفضل ثنائي (Fe++) عشان يقدر يشيل الأكسجين ويسيبه.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Iron state: Ferrous (Fe++) only.<br>• Porphyrin type: Protoporphyrin.<br>• Globin structure: 2 pairs of polypeptide chains.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 26 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 26 (Slide 26): توزيع الحديد في الجسم (Iron Distribution in Body)</h4>
+          <span class="exp-card-tag">الهيموجلوبين ومخزون الفيريتين</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Total Iron: 3 - 5 g.<br>Distribution: Hemoglobin: 65 - 75% (~3 g); Stored iron: 20% (~1 g) stored as Ferritin in liver, spleen, and bone marrow; Unavailable (tissue iron) in cytochromes/myoglobin; Plasma iron bound to Transferrin (3-4 mg).<br>Diagnostic value: Measuring Serum Ferritin gives an accurate indication of total iron stores.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>إجمالي حديد الجسم: 3 - 5 جم.<br>توزيعه: الهيموجلوبين يمثل 65-75% (3 جم)، الحديد المخزون يمثل 20% (1 جم) في صورة فيريتين في الكبد والطحال والنخاع، وحديد الأنسجة في المايوجلوبين والإنزيمات، وحديد البلازما محمول على الترانسفيرين (3-4 مجم). قياس الفيريتين في مصل الدم يعكس حجم المخزون بدقة.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>كل حديد جسمك وزنه من 3 لـ 5 جرام؛ تلتين الحديد ده رايح يشيل أكسجين في الهيموجلوبين، وخُمس الحديد (20%) متخزن في خزنة الكبد والطحال على شكل Ferritin. والتحليل اللي بيقيس المخزون في المعمل اسمه Serum Ferritin.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Total iron: 3-5 g.<br>• Major fraction: Hb (65-75%).<br>• Storage form: Ferritin (20%).<br>• Best test for iron stores: Serum Ferritin.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 27 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 27 (Slide 27): مصادر الحديد في الغذاء (Iron in Food)</h4>
+          <span class="exp-card-tag">حديد الهيم وغير الهيم</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Daily intake: Diet provides 10 - 20 mg of iron.<br>Forms of iron: Organic: Animal protein (Heme iron) in the Ferrous state (Fe++), highly absorbed; Inorganic: Plant protein (Non-heme iron) in the Ferric state (Fe+++), poorly absorbed.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>الاحتياج اليومي: يوفر الغذاء 10-20 مجم حديد يومياً.<br>أشكال الحديد: عضوي (حديد الهيم من البروتين الحيواني في صورة ثنائية Fe++ عالي الامتصاص)، وغير عضوي (حديد غير الهيم من النباتات في صورة ثلاثية Fe+++ ضعيف الامتصاص).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الحديد الحيواني (Heme) ده برنس، ثنائي وجاهز للجسم يمتصه علطول؛ أما الحديد النباتي اللي في السبانخ والبقوليات (Non-heme) بيكون ثلاثي (Fe+++) وغلس وامتصاصه بطيء ومحتاج يتحول لثنائي.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Animal iron: Heme iron, Ferrous (Fe++).<br>• Plant iron: Non-heme iron, Ferric (Fe+++).
+        </div>
+      </div>
+    </div>
+    <!-- Slide 28 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 28 (Slide 28): فسيولوجيا امتصاص الحديد (Iron Absorption Factors)</h4>
+          <span class="exp-card-tag">محفزات ومثبطات الامتصاص</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Iron is absorbed exclusively in the Ferrous state (Fe++).<br>Promoters of absorption (↑): Gastric HCl and Vitamin C (reducing agents convert Fe3+ -> Fe2+).<br>Inhibitors of absorption (↓): Phytic acid, oxalates, and phosphates decrease absorption by forming insoluble iron salts.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>يُمتص الحديد بسهولة وحصرياً في الحالة الثنائية الحديدوز (Fe++).<br>عوامل تزيد الامتصاص: حمض المعدة وفيتامين سي (عوامل اختزال تحول الحديد من ثلاثي لثنائي).<br>عوامل تقلل الامتصاص: حمض الفايتيك، الأوكسالات، والفوسفات لأنها تكون أملاح حديد غير قابلة للذوبان.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>قاعدة ذهبية: الأمعاء مبتعرفش تعدي غير الحديد الثنائي (Fe++)! فيتامين C وحمض المعدة بيساعدوا في تحويل الحديد لثنائي عشان يمتص؛ أما الفايتات والأوكسالات والفوسفات بيمسكوا في الحديد ويعملوا طوب مترسب ينزل في البراز وميمتصش.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Absorbable form: Fe++ (Ferrous).<br>• Reducing agents: HCl & Vitamin C.<br>• Inhibitors: Phytic acid, Oxalates, Phosphates (Insoluble salts).
+        </div>
+      </div>
+    </div>
+    <!-- Slide 29 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 29 (Slide 29): أطعمة تقلل امتصاص الحديد (Foods Inhibiting Absorption)</h4>
+          <span class="exp-card-tag">الشاي واللبن والشوفان</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Phytates-rich foods: Sesame, brown rice, oats flakes, chickpeas.<br>High-oxalate foods: Black tea, dark chocolate, spinach, nuts.<br>High-phosphorus foods: Milk, cheese, cola drinks, canned fish.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>أطعمة غنية بالفايتات: السمسم، الأرز البني، رقائق الشوفان، والحمص.<br>أطعمة غنية بالأوكسالات: الشاي الأسود، الشوكولاتة الداكنة، السبانخ، والمكسرات.<br>أطعمة غنية بالفوسفور: الحليب، الجبن، الكولا، والأسماك المعلبة.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>أمثلة عملية بتيجي في الـ MCQ: الشاي الأسود مليان أوكسالات (عشان كده ممنوع بعد الأكل)، واللبن والكولا مليانين فوسفات، والشوفان والحبوب فيها فايتات؛ كلهم بيرسبوا الحديد.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Tea: Oxalates.<br>• Cola & Dairy: Phosphates.<br>• Grains & Oats: Phytates.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 30 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 30 (Slide 30): ميكانيزم الامتصاص في الأمعاء (Mechanism of Absorption)</h4>
+          <span class="exp-card-tag">ظاهرة الـ Mucosal Block في الاثني عشر</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Active process occurring in the upper part of the small intestine (duodenum).<br>Mucosal cells contain Apoferritin (carrier): Apoferritin + Fe++ = Ferritin.<br>When apoferritin is saturated, no more iron can be absorbed (mucosal block), excess iron is lost in feces.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>عملية نشطة تستهلك طاقة تحدث في الجزء العلوي من الأمعاء الدقيقة (الاثني عشر).<br>تحتوي خلايا الغشاء المخاطي على بروتين أبوفيريتين، يتحد مع الحديد الثنائي ليكون الفيريتين.<br>عند تشبع الأبوفيريتين بالحديد يتوقف الامتصاص ويخرج الحديد الزائد في البراز.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الامتصاص بيحتاج طاقة (Active) وبيحصل في أول الأمعاء. الخلية فيها بروتين فاضي اسمه Apoferritin، يمسك فيه الحديد ويتحول لـ Ferritin. لو البراميل دي اتملت كلها، الباب بيقفل ومفيش حديد هيدخل تاني عشان ميحصلش تسمم.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Process: Active transport.<br>• Site: Upper small intestine (Duodenum).<br>• Saturation rule: Saturation of Apoferritin blocks further absorption.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 31 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 31 (Slide 31): نقل وتخزين الحديد في البلازما (Iron Transport in Plasma)</h4>
+          <span class="exp-card-tag">الترانسفيرين وتشبع الـ 35%</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Absorbed iron binds loosely to a plasma Beta globulin called Apotransferrin to form Transferrin.<br>Plasma transferrin is normally 35% saturated with iron.<br>Excess iron is deposited in the liver and spleen, which contain apoferritin forming Storage Iron (Ferritin).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>يتحد الحديد الممتص اتحاداً ضعيفاً مع بيتا جلوبيولين في البلازما (أبوتيرانسفيرين) ليكون الترانسفيرين.<br>يكون الترانسفيرين مُشبعاً طبيعياً بالحديد بنسبة 35%.<br>يترسب الحديد الزائد في الكبد والطحال متحداً مع الأبوفيريتين ليكون حديد التخزين (الفيريتين).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>تاكسي الحديد في الدم اسمه Transferrin (نوعه بيتا جلوبيولين)، وماشي في الدم تلت كراسيه بس مليانة (35% تشبع) والتلتين فاضيين كاحتياطي؛ والحديد الزايد بيتركن في الكبد والطحال على شكل Ferritin.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Blood carrier: Transferrin (Beta globulin).<br>• Saturation: 35%.<br>• Storage iron: Ferritin.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 32 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 32 (Slide 32): مسار دورة الحديد في الجسم (Pathway of Iron)</h4>
+          <span class="exp-card-tag">الرحلة الكاملة للحديد</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Dietary Fe -> Stomach (Fe++ + Gastroferritin) -> Intestine (Absorption) -> Plasma (Transferrin) -> Tissues (Bone marrow for Hb / Liver stored as Ferritin).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>مسار الحديد: يدخل المعدة ← يرتبط ببروتين جاستروفيريتين ← يمتص بالأمعاء ← يحمله الترانسفيرين في البلازما ← يتجه لنخاع العظم لتصنيع الهيموجلوبين أو الكبد للتخزين كفيريتين.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>خطوات رحلة الحديد ملخصة: المعدة تحوله لثنائي ويركب تاكسي المعدة (Gastroferritin) ← يروح الأمعاء ويمتص ← يركب تاكسي الدم (Transferrin) ← جزء يروح يصنع دم في النخاع وجزء يتخزن في الكبد.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Stomach carrier: Gastroferritin.<br>• Blood carrier: Transferrin.<br>• Storage site: Bone marrow (Hb) & Liver (Ferritin).
+        </div>
+      </div>
+    </div>
+    <!-- Slide 33 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 33 (Slide 33): جدول بروتينات الحديد الأربعة (Four Iron Proteins Table)</h4>
+          <span class="exp-card-tag">المقارنة الكاملة للبروتينات الأربعة</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Gastroferritin: Carries iron in stomach to intestines.<br>Transferrin: Carries iron in blood.<br>Ferritin: Stores iron in liver and tissues.<br>Apoferritin: Protein that binds to iron to form ferritin in tissues.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>جدول البروتينات الأربعة:<br>- جاستروفيريتين (Gastroferritin): ينقل الحديد من المعدة للأمعاء.<br>- ترانسفيرين (Transferrin): يحمل وينقل الحديد في مجرى الدم.<br>- فيريتين (Ferritin): يخزن الحديد في الكبد والأنسجة.<br>- أبوفيريتين (Apoferritin): البروتين الرابط الذي يتحد بالحديد لتكوين الفيريتين.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>سؤال ماتش واختيارات مضمون: Gastro يعني معدة (ناقل المعدة)، Transfer يعني نقل (تاكسي الدم)، Apo يعني فاضي (البروتين الخالي من الحديد)، Ferritin ده المخزن الكبير المليان.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Gastroferritin: Stomach -> Intestine.<br>• Transferrin: Blood carrier.<br>• Ferritin: Tissue storage.<br>• Apoferritin: Unbound protein.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 34 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 34 (Slide 34): حمض الفوليك (Folic Acid - Vitamin B9)</h4>
+          <span class="exp-card-tag">بناء الـ DNA وانقسام الخلايا</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Folic acid (Vitamin B9) functions:<br>- Synthesis of pyrimidine and thymine bases.<br>- Essential for the formation of DNA and hence for normal cell division.<br>- Deficiency leads to impairment division of erythrocyte.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>وظائف حمض الفوليك (فيتامين ب9):<br>- تخليق قواعد البيريميدين والثايمين.<br>- أساسي وضروري لتكوين الحمض النووي (DNA) وبالتالي لانقسام الخلايا الطبيعي.<br>- نقصه يؤدي إلى اعتلال وقصور في انقسام خلايا الدم الحمراء.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الفوليك أسيد هو صانع الـ DNA؛ بيصنع حروف البيريميدين والثايمين اللي بنبني بيها الشريط الوراثي، فلو نقص الفوليك أسيد كرات الدم في النخاع مش هتعرف تنقسم انقسام طبيعي ويحصل قصور في عددها.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Role: Pyrimidine & Thymine synthesis -> DNA.<br>• Function: Normal cell division.<br>• Deficiency: Impairment of erythrocyte division.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 35 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 35 (Slide 35): فيتامين ب12 (Vitamin B12 - Cyanocobolamine)</h4>
+          <span class="exp-card-tag">المصادر الحيوانية والعامل الداخلي وغلاف المايلين</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Vitamin B12 functions & properties:<br>- Required for the action of folic acid.<br>- Not synthesized in the body, found ONLY in animal products.<br>- Myelin formation, so its deficiency is accompanied by neurological symptoms.<br>- Needs Intrinsic Factor (IF) from oxyntic cells of the stomach to be absorbed from the ileum.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>خصائص ووظائف فيتامين ب12 (سيانوكوبالامين):<br>- ضروري ومطلوب لتنشيط عمل حمض الفوليك.<br>- لا يُصنع بالجسم ويعتمد على الغذاء، ويوجد فقط في المنتجات الحيوانية.<br>- مسؤول عن تكوين المايلين، ولذلك يصاحب نقصه أعراض عصبية.<br>- يحتاج إلى العامل الداخلي (IF) المُفرز من الخلايا الحمضية (Oxyntic cells) بالمعدة ليتم امتصاصه من اللفائفي (Ileum).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>فيتامين B12 مفتاح تشغيل الفوليك أسيد؛ مصدره لحمة وبيض بس (مفيش نباتات)؛ مسؤول عن غلاف الأعصاب (Myelin) فنقصه بيعمل تنميل وشلل عصبي؛ ولازم خلايا الـ Oxyntic في المعدة تفرز العامل الداخلي عشان يوصله لآخر حتة في الأمعاء (Ileum) ويمتصه.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Source: Animal products ONLY.<br>• Nervous system role: Myelin formation (Deficiency = Neurological symptoms).<br>• Absorption site: Ileum via Intrinsic factor from Oxyntic cells.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 36 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 36 (Slide 36): المعادن النادرة والهرمونات (Trace Elements & Hormones)</h4>
+          <span class="exp-card-tag">النحاس، الكوبالت، وتأثير الهرمونات</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          4- Trace elements: Copper and Cobalt are cofactors for formation of Hb.<br>5- Hormones: Androgen, thyroxine, and glucocorticoids stimulates erythropoiesis, while estrogen inhibits it.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>4- العناصر الزهيدة (المعادن النادرة): النحاس والكوبالت عوامل مساعدة لتكوين الهيموجلوبين.<br>5- الهرمونات: الأندروجين، الثيروكسين، والجلوكوكورتيكويد تُحفز تكوين كرات الدم الحمراء، بينما يُثبطها الإستروجين.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>النحاس والكوبالت شغالين مساعدين (Cofactors) لإنزيمات بناء الـ Hb. هرمونات بتزود إنتاج الدم: التستوستيرون (عشان كده كرات الدم في الرجالة أعلى)، الثيروكسين بتاع الغدة، والكورتيزول. هرمون بيهبط الإنتاج: الإستروجين بتاع الإناث.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Cofactors for Hb: Copper & Cobalt.<br>• Stimulating hormones: Androgen, Thyroxine, Glucocorticoids.<br>• Inhibiting hormone: Estrogen.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 37 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 37 (Slide 37): سلامة الأعضاء الأساسية (Healthy Bone Marrow & Liver)</h4>
+          <span class="exp-card-tag">مصنع النخاع ومخازن الكبد</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          6- Healthy bone marrow: Acts as the primary erythropoietic factory.<br>7- Healthy liver: Stores iron and vitamin B12, synthesizes globin precursors and plasma proteins, and secretes 15% of erythropoietin.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>6- نخاع عظم سليم وصحي: يمثل مصنع الإنتاج الفعلي للخلايا.<br>7- كبد سليم وصحي: يخزن الحديد وفيتامين ب12، ويصنع بروتينات الدم، ويفرز 15% من هرمون الإريثروبويتين.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>النخاع هو المصنع لو اتعرض لإشعاع أو فشل الإنتاج هيقف؛ والكبد هو المخزن بتاع الحديد وب12 ومصنع بروتينات الجلوبين، وهو اللي بيساعد الكلى في إفراز 15% من هرمون الإريثروبويتين.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Marrow: Production factory.<br>• Liver: Storage (Iron & B12) + Proteins + 15% Erythropoietin.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 38 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 38 (Slide 38): أنيميا نقص الحديد (Iron Deficiency Anemia)</h4>
+          <span class="exp-card-tag">Microcytic Hypochromic Anemia</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Iron Deficiency Anemia (Microcytic Hypochromic Anemia):<br>- The most common type of anemia worldwide.<br>- Characterized by: Small red blood cells (↓ MCV) with low hemoglobin content (↓ MCHC), appearing pale under microscopy.<br>- Causes: Inadequate dietary intake, impaired absorption, increased requirement (pregnancy), or chronic blood loss (peptic ulcer, piles, menorrhagia).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>أنيميا نقص الحديد (أنيميا صغر حجم الخلايا ونقص صبغتها):<br>- أشهر أنواع الأنيميا في العالم.<br>- تتميز بـ: خلايا دم حمراء صغيرة الحجم (انخفاض MCV) وقليلة الهيموجلوبين (انخفاض MCHC) وتبدو شاحبة وفاتحة تحت الميكروسكوب.<br>- الأسباب: قلة التناول الغذائي، سوء الامتصاص، زيادة الاحتياج (الحمل)، أو النزيف المزمن (قرحة المعدة، البواسير، غزارة الطمث).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>أشهر نوع أنيميا: لما الحديد ينقص، الخلية تطلع قزمة ولونها باهت عشان مفيهاش هيموجلوبين، وتتسمى في التحليل Microcytic Hypochromic. سببها يا مبتاكلش حديد، يا بتنزف نزيف بسيط ومستمر زي قرحة أو بواسير.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Indices: Microcytic, Hypochromic (↓ MCV, ↓ MCHC).<br>• Common causes: Chronic blood loss, poor diet.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 39 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 39 (Slide 39): أنيميا تضخم الأرومات والأنيميا الخبيثة (Megaloblastic & Pernicious Anemia)</h4>
+          <span class="exp-card-tag">Macrocytic Anemia وتلف الأعصاب</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Megaloblastic Anemia (Macrocytic Normochromic):<br>- Abnormally large, immature RBC precursors (Megaloblasts) with increased MCV (>100 FL) due to Folic Acid or B12 deficiency.<br>Pernicious Anemia:<br>- Autoimmune destruction of gastric oxyntic cells -> Absence of Intrinsic Factor -> failure to absorb Vitamin B12 -> anemia combined with irreversible neurological damage.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>أنيميا تضخم الأرومات (Macrocytic Anemia):<br>- تتميز بخلايا دم كبيرة الحجم وغير ناضجة (Megaloblasts) مع ارتفاع في الـ MCV لأكثر من 100 فيمتولتر بنقص الفوليك أو ب12.<br>الأنيميا الخبيثة (Pernicious Anemia):<br>- نوع مناعي ذاتي ناتج عن تدمير خلايا المعدة الجدارية (Oxyntic cells) وغياب العامل الداخلي وفشل امتصاص فيتامين ب12 مما يسبب أنيميا مصحوبة بتلف وأعراض عصبية خطيرة.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>لما ينقص الفوليك أو B12، النواة متتقسمش والخلية تفضل تكبر وتطلع في الدم منفوخة (Macrocytic). ولما يكون سبب نقص B12 إن جدار المعدة ادمر ومفيش Intrinsic Factor، بنسميها الأنيميا الخبيثة (Pernicious) ودي كارثتها إنها بتبوظ الأعصاب.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Megaloblastic index: Macrocytic (↑ MCV).<br>• Pernicious cause: Absence of Intrinsic Factor.<br>• Pernicious hallmark: Macrocytic anemia + Neurological symptoms.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 40 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 40 (Slide 40): أنواع الهيموجلوبين الطبيعي (Normal Types of Hemoglobin)</h4>
+          <span class="exp-card-tag">HbA و HbA2 و HbF</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Types of Normal Human Hemoglobin:<br>- HbA (Adult): 96-98% (2 alpha + 2 beta: α2β2).<br>- HbA2: 1.5 - 3% (2 alpha + 2 delta: α2δ2).<br>- HbF (Fetal): 2 alpha + 2 gamma (α2γ2); predominates in fetus and has a higher affinity for oxygen than HbA.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>أنواع الهيموجلوبين البشري الطبيعي:<br>- هيموجلوبين البالغين (HbA): يمثل 96-98% ويتكون من سلسلتي ألفا وسلسلتي بيتا (α2β2).<br>- هيموجلوبين HbA2: يمثل 1.5-3% ويتكون من سلسلتي ألفا وسلسلتي دلتا (α2δ2).<br>- هيموجلوبين الجنين (HbF): يتكون من سلسلتي ألفا وسلسلتي جاما (α2γ2)، وهو السائد في الجنين وله قدرة ارتباط أعلى بالأكسجين لانتزاعه من دم الأم.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>البالغ عنده HbA (ألفا وبيتا). أما الجنين وهو في بطن أمه عنده هيموجلوبين خاص اسمه HbF (ألفا وجاما)، وده ربنا خلقه عشان يعشق الأكسجين أكتر من دم الأم فيعرف يمتص الأكسجين منها عبر المشيمة بسهولة.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • HbA chains: α2β2.<br>• HbF chains: α2γ2.<br>• HbF oxygen affinity: Higher affinity than HbA.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 41 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 41 (Slide 41): اعتلالات الهيموجلوبين الوراثية (Hemoglobinopathies: Sickle & Thalassemia)</h4>
+          <span class="exp-card-tag">طفرة الفالين في المنجلية والخلل الكمي بالثلاسيميا</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          1. Sickle Cell Anemia (HbS):<br>- Qualitative defect: Valine replaces Glutamic acid at position 6 of the β-chain -> rigid sickle shapes at low O2 -> hemolysis and thrombosis.<br>2. Thalassemia:<br>- Quantitative defect: Decreased synthesis rate of normal globin chains (α or β deficiency).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>1. أنيميا الخلايا المنجلية (HbS):<br>- عيب جيني نوعي: استبدال حمض الجلوتاميك بحمض الفالين في الموقع رقم 6 على سلسلة بيتا وتتحول الخلايا لشكل المنجل بنقص الأكسجين.<br>2. أنيميا البحر الأبيض المتوسط (الثلاسيميا):<br>- عيب جيني كمي: نقص كمي في معدل تصنيع سلاسل الجلوبين (نقص ألفا أو نقص بيتا).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>سؤال امتحان سنوي: أنيميا الخلايا المنجلية طفرة نوعية بيتشال حمض الجلوتاميك ويتحط مكانه فالين (Valine) في السلسلة بيتا، فتتحول الخلية لشكل هلال/منجل. أما الثلاسيميا ده عيب في الكمية (نقص سلاسل ألفا أو بيتا).</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Sickle mutation: Valine replaces Glutamic acid (position 6 of β-chain).<br>• Sickle cell shape: Sickle / Crescent shape at low O2.<br>• Thalassemia: Quantitative defect in globin chains.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 42 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 42 (Slide 42): تكسير كرات الدم الحمراء ومصير الهيموجلوبين (RBCs Destruction)</h4>
+          <span class="exp-card-tag">مقبرة الطحال وتحلل الهيم</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          After 120 days, RBCs break down in the Spleen (graveyard of RBCs) by Macrophages.<br>Breakdown of Hemoglobin:<br>- Globin: Hydrolyzed into amino acids (reused).<br>- Heme: Iron (Fe++) released and stored in ferritin; Porphyrin ring converted to Biliverdin (green) -> reduced to Bilirubin (yellow).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>بعد 120 يوماً، تصبح كرات الدم هشة وتتكسر أثناء مرورها في الأوعية الضيقة خاصة في الطحال (مقبرة كرات الدم الحمراء).<br>تبتلعها الخلايا الأكولة (Macrophages) في الطحال والكبد ونخاع العظم.<br>مصير الهيموجلوبين: الجلوبين يتحلل لأحماض أمينية يُعاد تدويرها؛ والحديد يخرج ليُخزن في الفيريتين؛ وحلقة البورفيرين تتحول لصبغة بيليفردين الخضراء ثم تُختزل إلى صبغة البيليروبين الصفراء.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الطحال هو مقبرة الدم. لما الخلية تعجز، الماكروفاج تاكلها وتفصص الهيموجلوبين: البروتين والحديد الجسم بيستفيد بيهم تاني ومبيرميهمش؛ لكن الحلقة الملونة (Heme) بتتحول لصبغة صفراء اسمها Bilirubin.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Graveyard of RBCs: Spleen.<br>• Iron & Globin fate: Conserved and recycled.<br>• Porphyrin breakdown: Biliverdin (green) -> Bilirubin (yellow).
+        </div>
+      </div>
+    </div>
+    <!-- Slide 43 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 43 (Slide 43): أيض البيليروبين المباشر وغير المباشر (Bilirubin Metabolism)</h4>
+          <span class="exp-card-tag">غير المقترن السام والمقترن الذائب في الماء</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          1. Unconjugated (Indirect) Bilirubin:<br>- Lipid-soluble, water-insoluble, toxic, bound to Albumin for transport to liver.<br>2. Conjugated (Direct) Bilirubin:<br>- Inside hepatocytes, conjugated with Glucuronic acid by Glucuronyl transferase -> water-soluble, non-toxic, secreted into bile.
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>1. البيليروبين غير المقترن / غير المباشر (Unconjugated): يخرج للدم، ويذوب في الدهون ولا يذوب في الماء وهو مادة سامة، وينتقل محمولاً على الألبيومين إلى الكبد.<br>2. البيليروبين المقترن / المباشر (Conjugated): داخل خلايا الكبد، يقترن مع حمض الجلوكورونيك بفضل إنزيم جلوكورونيل ترانسفيريز، فيصبح ذائباً في الماء وغير سام، ويُفرز مع العصارة الصفراوية للأمعاء.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>مقارنة مهمة جداً: البيليروبين أول ما بيطلع بيكون غير مباشر (Indirect) مابيدوبش في المية وسام ولازم يركب على تاكسي الألبيومين. لما يدخل الكبد، يركبله حمض الجلوكورونيك ويتحول لمباشر (Direct) بيدوب في المية ومش سام، ويترمى في الأمعاء مع العصارة الصفراوية.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Unconjugated (Indirect): Insoluble in water, bound to Albumin, toxic.<br>• Conjugated (Direct): Water-soluble, coupled with Glucuronic acid, non-toxic.<br>• Conjugating enzyme: Glucuronyl transferase.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 44 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 44 (Slide 44): مصير البيليروبين في الأمعاء ولون البراز والبول (Bilirubin in Intestine)</h4>
+          <span class="exp-card-tag">اليوروبيلينوجين والستيركوبيلين واليوروبيلين</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          In intestines, bacteria convert conjugated bilirubin into Urobilinogen.<br>Fate of Urobilinogen:<br>- 85% oxidized to Stercobilin -> excreted in feces (gives brown color).<br>- 15% reabsorbed: most to liver, small portion to kidneys oxidized to Urobilin -> excreted in urine (gives yellow color).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>في الأمعاء، تحول بكتيريا الفلورا البيليروبين المباشر إلى يوروبيلينوجين (Urobilinogen).<br>مصير اليوروبيلينوجين:<br>- 85% يتأكسد إلى ستيركوبيلين (Stercobilin) ويخرج مع البراز (يعطي البراز لونه البني الطبيعي).<br>- 15% يُعاد امتصاصه للكبد، وجزء منه يصل للكليتين ويتأكسد إلى يوروبيلين (Urobilin) ويخرج مع البول (يعطي البول لونه الأصفر الكهرماني).</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>البيليروبين في الأمعاء بكتيريا البطن بتاكله وتحوله لـ Urobilinogen: أغلبه بيكمل مع البراز ويتحول لـ Stercobilin وهو ده اللي مدي البراز لونه البني؛ وجزء صغير يمتص ويوصل للبول ويتحول لـ Urobilin وهو اللي مدي البول لونه الأصفر.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Brown stool color: Stercobilin.<br>• Yellow urine color: Urobilin.<br>• Intestinal precursor: Urobilinogen.
+        </div>
+      </div>
+    </div>
+    <!-- Slide 45 -->
+    <div class="explanation-card highlight-card">
+      <div class="explanation-card-header">
+        <div>
+          <h4 class="exp-card-title">الشريحة 45 (Slide 45): اليرقان / الصفراء وأنواعه (Jaundice / Icterus)</h4>
+          <span class="exp-card-tag">الصفراء التكسيرية والكبدية والانسدادية</span>
+        </div>
+      </div>
+      <div class="explanation-card-body">
+        <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
+          Jaundice: Yellowish discoloration of skin and sclera due to hyperbilirubinemia (>2.0 - 2.5 mg/dl).<br>Types:<br>1. Hemolytic (Pre-hepatic): Excessive RBC breakdown -> ↑ Unconjugated bilirubin.<br>2. Hepatocellular (Hepatic): Liver cell damage -> ↑ Both conjugated and unconjugated bilirubin.<br>3. Obstructive (Post-hepatic): Obstruction of bile ducts -> ↑ Conjugated bilirubin (causes pale clay-colored stool and dark urine).
+        </p>
+        <div class="exp-points-box" style="margin-bottom: 12px;">
+          <div class="exp-box-title">الترجمة بالعربي:</div>
+          <p>اليرقان (الصفراء): اصفرار لون الجلد والأغشية المخاطية وبياض العين بسبب تراكم صبغة البيليروبين في الدم (>2.0 - 2.5 مجم/ديسيلتر).<br>أنواع الصفراء:<br>1. صفراء تكسيرية (Hemolytic): زيادة تكسير الدم، ويزداد فيها البيليروبين غير المقترن (غير المباشر).<br>2. صفراء كبدية (Hepatocellular): بسبب التهاب أو تليف الكبد، ويزداد فيها النوعان.<br>3. صفراء انسدادية (Obstructive): بسبب انسداد القنوات المرارية، ويزداد فيها البيليروبين المقترن (المباشر)، وتتميز ببراز فاتح شاحب وبول داكن كالشاوي.</p>
+        </div>
+        <div class="exp-focus-box" style="margin-bottom: 12px;">
+          <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
+          <p>الصفراء بتظهر على بياض العين والجلد لو البيليروبين عدى 2 أو 2.5 مجم/ديسيلتر. أنواعها تلاتة:<br>1. تكسيرية (دم بيتكسر بغباء) -> يزيد غير المباشر (Indirect).<br>2. كبدية (الكبد ملتهب ومش عارف يشتغل) -> الاتنين بيزيدوا.<br>3. انسدادية (حصوة سادة ماسورة المرارة) -> يزيد المباشر (Direct) ويرد في الدم، ولأن الصبغة منزلتش الأمعاء فالبراز يطلع أبيض زي الطباشير (Clay-colored)، والبول ينزل غامق جداً.</p>
+        </div>
+        <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
+          <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
+          • Clinical threshold: Total bilirubin > 2.0 - 2.5 mg/dl.<br>• Hemolytic jaundice: ↑ Unconjugated bilirubin.<br>• Obstructive jaundice: ↑ Conjugated bilirubin + Clay-colored stool.
+        </div>
+      </div>
+    </div>
+</div>
+
         </section>
         <!-- ===================================================================
              SECTION EXPLANATION: شرح المحاضرة التفصيلي (Blood Physiology)
@@ -11278,37 +12466,7 @@
                 <!-- ===================================================================
              SECTION EXPLANATION: شرح المحاضرة التفصيلي الكامل (Blood Physiology 1 - 45)
              =================================================================== -->
-        <div id="detailedExpBloodContainer" class="detailed-explanation-container" style="display: none;">
-
-          <!-- Slide 1 -->
-          <div class="explanation-card highlight-card">
-            <div class="explanation-card-header">
-              <div>
-                <h4 class="exp-card-title">الشريحة 1 (Slide 1): مقدمة الدم (Introduction to Blood)</h4>
-                <span class="exp-card-tag">التصنيف النسيجي للدم</span>
-              </div>
-            </div>
-            <div class="explanation-card-body">
-              <p class="exp-lead" dir="ltr" style="font-family: var(--font-en); text-align: left; font-weight: 700; color: var(--mint-700);">
-                • Blood is a specialized liquid connective tissue consisting of formed elements suspended in a fluid matrix called plasma.
-              </p>
-              <div class="exp-points-box" style="margin-bottom: 12px;">
-                <div class="exp-box-title">الترجمة بالعربي:</div>
-                <p>الدم هو نسيج ضام سائل متخصص يتكون من عناصر خلوية معلقة في مادة خلالية سائلة تُسمى البلازما.</p>
-              </div>
-              <div class="exp-focus-box" style="margin-bottom: 12px;">
-                <div class="exp-focus-title">الشرح بالعامية للامتحان:</div>
-                <p>الدم مش مجرد مية أو سائل عادي، تصنيفه النسيجي في الجسم إنه "نسيج ضام" زي الغضاريف والعظام بس في صورة سائلة، وبيتكون من جزئين: سائل شغال بحر اسمه البلازما، وعايم جواه الخلايا (حمرا، بيضا، صفائح).</p>
-              </div>
-              <div style="background: var(--bg-card); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-light); font-size: 0.88rem;">
-                <strong>الكلمات المفتاحية (MCQ Keywords):</strong><br>
-                • <strong>Blood tissue type:</strong> Liquid connective tissue.<br>
-                • <strong>Main components:</strong> Formed elements + Plasma.
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
+        <!-- Slide 2 -->
           <div class="explanation-card">
             <div class="explanation-card-header">
               <div>
@@ -20069,7 +21227,82 @@ function handleDragLeave(e) {
       }
     }
   };
-</script></body>
+</script><script id="clean-view-and-video-controller">
+  function configureViewsForLecture(lecId) {
+    const videoSec = document.getElementById('section-video');
+    const pathoList = document.getElementById('videoPathoList');
+    const anatList = document.getElementById('videoAnatList');
+    const tabDetailed = document.getElementById('tabBtnDetailedExplanation');
+    const bloodContainer = document.getElementById('detailedExpBloodContainer');
+    const socioContainer = document.querySelector('#section-explanation .detailed-explanation-container:not(#detailedExpBloodContainer)');
+
+    if (pathoList) pathoList.style.display = 'none';
+    if (anatList) anatList.style.display = 'none';
+
+    let notice = document.getElementById('videoEmptyNotice');
+    if (!notice && videoSec) {
+      notice = document.createElement('div');
+      notice.id = 'videoEmptyNotice';
+      notice.className = 'empty-state-card';
+      notice.style.margin = '20px auto';
+      videoSec.appendChild(notice);
+    }
+
+    if (lecId === 'pphy102_lec1') {
+      if (pathoList) pathoList.style.display = 'block';
+      if (notice) notice.style.display = 'none';
+    } else if (lecId === 'anat101_lec1') {
+      if (anatList) anatList.style.display = 'block';
+      if (notice) notice.style.display = 'none';
+    } else {
+      if (notice) {
+        notice.innerHTML = `
+          <h4 style="color: var(--text-main); margin-bottom: 6px; font-weight: 800;">لا توجد تسجيلات فيديو لهذه المحاضرة حالياً</h4>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">يمكنك دراسة المحتوى بالكامل من تبويب <strong>"شرح المحاضرة التفصيلي"</strong> والمصطلحات وبنك الأسئلة.</p>
+        `;
+        notice.style.display = 'block';
+      }
+    }
+
+    if (lecId === 'phy101_lec1') {
+      if (tabDetailed) tabDetailed.style.display = 'inline-flex';
+      if (bloodContainer) bloodContainer.style.display = 'flex';
+      if (socioContainer) socioContainer.style.display = 'none';
+      window.switchSection('section-explanation');
+    } else if (lecId === 'socio_lec1') {
+      if (tabDetailed) tabDetailed.style.display = 'inline-flex';
+      if (bloodContainer) bloodContainer.style.display = 'none';
+      if (socioContainer) socioContainer.style.display = 'flex';
+      window.switchSection('section-explanation');
+    } else {
+      if (tabDetailed) tabDetailed.style.display = 'none';
+      if (bloodContainer) bloodContainer.style.display = 'none';
+      if (socioContainer) socioContainer.style.display = 'none';
+      window.switchSection('all');
+    }
+  }
+
+  const _prevOpenLec = window.openLecture;
+  window.openLecture = function(lecId, pushState = true) {
+    if (typeof _prevOpenLec === 'function') _prevOpenLec(lecId, pushState);
+    configureViewsForLecture(lecId);
+  };
+
+  const _prevShowHome = window.showHomeView;
+  window.showHomeView = function(pushState = true) {
+    const b = document.getElementById('detailedExpBloodContainer');
+    if (b) b.style.display = 'none';
+    if (typeof _prevShowHome === 'function') _prevShowHome(pushState);
+  };
+
+  const _prevShowSubj = window.showSubjectOverview;
+  window.showSubjectOverview = function(subjId, pushState = true) {
+    const b = document.getElementById('detailedExpBloodContainer');
+    if (b) b.style.display = 'none';
+    if (typeof _prevShowSubj === 'function') _prevShowSubj(subjId, pushState);
+  };
+</script>
+</body>
 
 </html>
 
