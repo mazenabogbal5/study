@@ -9895,6 +9895,27 @@
     color: var(--rose-600);
     border-color: var(--rose-border);
   }
+</style><style id="fix-study-tabs-visible">
+  /* ضمان ظهور شريط التبويبات وأزراره بشكل دائم وثابت بعد أي انتقال أو ريفريش */
+  .study-tabs-container,
+  .tabs-wrapper,
+  .tab-btn {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* استثناء أزرار التبويبات من أي إخفاء عام */
+  .tab-btn {
+    display: inline-flex !important;
+  }
+
+  /* إخفاء الأيقونات الجانبية فقط دون المساس بالتبويبات أو المحتوى الأساسي */
+  .stat-icon, .section-icon-badge, .tool-icon, .exp-icon-box, 
+  .modal-icon-badge, .modal-icon, .exam-intro-icon, .subject-icon-box,
+  .dropzone-icon, .empty-state-icon, .lecture-dot {
+    display: none !important;
+  }
 </style></head>
 
 <body>
