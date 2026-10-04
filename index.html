@@ -9615,6 +9615,104 @@
   #lecture-view.show-all #section-explanation {
     display: none !important;
   }
+</style><style id="clean-complete-minimal">
+  /* إخفاء الشروحات العربية والدوائر حول الأرقام */
+  .lecture-hero .hero-desc,
+  .section-header-wrap .section-subtitle,
+  .subject-overview-desc,
+  #subjOverviewDesc,
+  .lecture-acc-details,
+  .exam-section-intro,
+  .home-hero-desc,
+  .brand-text span {
+    display: none !important;
+  }
+
+  .tab-btn .tab-count {
+    display: inline !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 4px !important;
+    border-radius: 0 !important;
+    font-weight: 700 !important;
+    color: inherit !important;
+  }
+  .tab-btn.active .tab-count {
+    color: #ffffff !important;
+    background: transparent !important;
+  }
+
+  .stat-icon, .section-icon-badge, .tool-icon, .exp-icon-box, 
+  .modal-icon-badge, .modal-icon, .exam-intro-icon, .subject-icon-box,
+  .dropzone-icon, .empty-state-icon, .lecture-dot {
+    display: none !important;
+  }
+
+  /* عزل شاشة المحاضرة لعدم تسربها للرئيسية */
+  body:not(.in-lecture-view) #lecture-view,
+  body:not(.in-lecture-view) .study-tabs-container,
+  body:not(.in-lecture-view) .lecture-content-section,
+  body:not(.in-lecture-view) .filter-toolbar {
+    display: none !important;
+  }
+
+  /* تنسيق تايمر المذاكرة */
+  .study-timer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 4px;
+  }
+  .study-timer-display {
+    font-family: var(--font-en);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-main);
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+  .study-timer-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .timer-select {
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+    background: var(--bg-card);
+    color: var(--text-main);
+    font-size: 0.76rem;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  .timer-btn {
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.74rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid var(--border-light);
+    background: var(--bg-card);
+    color: var(--text-main);
+    transition: var(--transition);
+  }
+  .timer-btn:hover {
+    background: var(--mint-soft);
+    color: var(--mint-700);
+  }
+  .timer-btn.active {
+    background: var(--rose-soft);
+    color: var(--rose-600);
+    border-color: var(--rose-border);
+  }
 </style></head>
 
 <body>
@@ -16993,6 +17091,188 @@ function handleDragLeave(e) {
   document.addEventListener('DOMContentLoaded', () => {
     ensureLectureDOMIntegrity();
   });
+</script><script id="subject-lectures-and-nav-fix">
+  const subjectsDataMap = {
+    'anat101': {
+      code: 'ANAT-101',
+      titleAr: 'علم التشريح البشري 1',
+      titleEn: 'Human Anatomy I',
+      lectures: [
+        {
+          id: 'anat101_lec1',
+          num: '1',
+          title: 'الأوضاع والاتجاهات التشريحية',
+          subtitle: 'Positions & Relations'
+        }
+      ]
+    },
+    'pphy102': {
+      code: 'PPHY-102',
+      titleAr: 'علم وظائف الأعضاء المرضي 1',
+      titleEn: 'Pathophysiology I',
+      lectures: [
+        {
+          id: 'pphy102_lec1',
+          num: '1',
+          title: 'علم الأمراض والالتهاب',
+          subtitle: 'Pathology & Inflammation'
+        }
+      ]
+    },
+    'hs103': {
+      code: 'HS-103',
+      titleAr: 'التنوع الاجتماعي الثقافي والصحة',
+      titleEn: 'Sociocultural Variation & Health',
+      lectures: [
+        {
+          id: 'socio_lec1',
+          num: '1',
+          title: 'قضايا التقييم الثقافي في الرعاية التمريضية',
+          subtitle: 'Cultural Assessment Issues'
+        }
+      ]
+    },
+    'engl099': { code: 'ENGL099', titleAr: 'اللغة الإنجليزية', titleEn: 'English Language', lectures: [] },
+    'humn101': { code: 'HUMN101', titleAr: 'علم النفس السلوكي', titleEn: 'Behavior Psychology', lectures: [] },
+    'comp101': { code: 'COMP101', titleAr: 'مقدمة في الحاسب الآلي', titleEn: 'Introduction to Computers', lectures: [] },
+    'phy101': { code: 'PHY-101', titleAr: 'علم وظائف الأعضاء البشري', titleEn: 'Human Physiology', lectures: [] }
+  };
+
+  // دالة عرض المحاضرات داخل صفحة المادة
+  window.renderSubjectLectures = function(subjKey) {
+    const container = document.getElementById('subjectLecturesContainer');
+    const badge = document.getElementById('subjLecturesCountBadge');
+    const codeEl = document.getElementById('subjOverviewCode');
+    const titleArEl = document.getElementById('subjOverviewTitleAr');
+    const titleEnEl = document.getElementById('subjOverviewTitleEn');
+    
+    const subj = subjectsDataMap[subjKey] || { code: subjKey, titleAr: 'المقرر', titleEn: '', lectures: [] };
+    
+    if (codeEl) codeEl.innerText = subj.code;
+    if (titleArEl) titleArEl.innerText = subj.titleAr;
+    if (titleEnEl) titleEnEl.innerText = subj.titleEn;
+
+    if (!container) return;
+    
+    if (!subj.lectures || subj.lectures.length === 0) {
+      if (badge) badge.innerText = '0 محاضرات';
+      container.innerHTML = `
+        <div class="subject-empty-card">
+          <div class="subject-empty-title">لا توجد محاضرات متاحة حالياً</div>
+          <div class="subject-empty-desc">سيتم رفع محاضرات هذا المقرر قريباً.</div>
+        </div>
+      `;
+      return;
+    }
+
+    if (badge) badge.innerText = `${subj.lectures.length} محاضرة`;
+    
+    container.innerHTML = subj.lectures.map(lec => `
+      <div class="qa-accordion-card open" style="margin-bottom: 12px;">
+        <div class="qa-header" style="cursor: pointer;" onclick="openLecture('${lec.id}')">
+          <div class="qa-title-area">
+            <span class="q-number-badge" style="background: var(--mint-500); color: white;">المحاضرة ${lec.num}</span>
+            <div class="q-text-wrapper">
+              <span class="q-title-en" dir="rtl" style="font-family: var(--font-ar); text-align: right; color: var(--text-main); font-weight: 800;">
+                ${lec.title}
+              </span>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-en);">${lec.subtitle}</span>
+            </div>
+          </div>
+          <div class="qa-header-actions">
+            <button class="lecture-start-btn" onclick="event.stopPropagation(); openLecture('${lec.id}')">
+              ابدأ المذاكرة
+            </button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  };
+
+  window.showSubjectOverview = function(subjId, pushState = true) {
+    document.body.classList.remove('in-lecture-view');
+    state.activeSubjectId = subjId;
+    const hv = document.getElementById('home-view');
+    const sv = document.getElementById('subject-overview-view');
+    const lv = document.getElementById('lecture-view');
+    if (hv) hv.style.display = 'none';
+    if (sv) sv.style.display = 'block';
+    if (lv) lv.style.display = 'none';
+    window.renderSubjectLectures(subjId);
+    if (pushState) history.pushState({ view: 'subject', subjectId: subjId }, '', '#subject-' + subjId);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  window.showHomeView = function(pushState = true) {
+    document.body.classList.remove('in-lecture-view');
+    const hv = document.getElementById('home-view');
+    const sv = document.getElementById('subject-overview-view');
+    const lv = document.getElementById('lecture-view');
+    if (hv) hv.style.display = 'block';
+    if (sv) sv.style.display = 'none';
+    if (lv) lv.style.display = 'none';
+    if (pushState) history.pushState({ view: 'home' }, '', '#home');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // تايمر المذاكرة
+  let studyTimerInterval = null;
+  let studyTimerRemaining = 25 * 60;
+  let isStudyTimerRunning = false;
+
+  function updateTimerDisplay() {
+    const el = document.getElementById('studyTimerDisplay');
+    if (!el) return;
+    const m = Math.floor(studyTimerRemaining / 60);
+    const s = studyTimerRemaining % 60;
+    el.innerText = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+  }
+
+  function changeTimerDuration(mins) {
+    pauseStudyTimer();
+    studyTimerRemaining = parseInt(mins, 10) * 60;
+    updateTimerDisplay();
+  }
+
+  function toggleStudyTimer() {
+    if (isStudyTimerRunning) {
+      pauseStudyTimer();
+    } else {
+      startStudyTimer();
+    }
+  }
+
+  function startStudyTimer() {
+    if (isStudyTimerRunning) return;
+    isStudyTimerRunning = true;
+    const btn = document.getElementById('studyTimerToggleBtn');
+    if (btn) { btn.innerText = 'إيقاف'; btn.classList.add('active'); }
+    
+    studyTimerInterval = setInterval(() => {
+      if (studyTimerRemaining > 0) {
+        studyTimerRemaining--;
+        updateTimerDisplay();
+      } else {
+        pauseStudyTimer();
+        if (typeof showToast === 'function') showToast('انتهى وقت المذاكرة المحدد!');
+      }
+    }, 1000);
+  }
+
+  function pauseStudyTimer() {
+    isStudyTimerRunning = false;
+    clearInterval(studyTimerInterval);
+    const btn = document.getElementById('studyTimerToggleBtn');
+    if (btn) { btn.innerText = 'بدء'; btn.classList.remove('active'); }
+  }
+
+  function resetStudyTimer() {
+    pauseStudyTimer();
+    const sel = document.getElementById('studyTimerDuration');
+    const mins = sel ? parseInt(sel.value, 10) : 25;
+    studyTimerRemaining = mins * 60;
+    updateTimerDisplay();
+  }
 </script></body>
 
 </html>
