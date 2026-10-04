@@ -9583,6 +9583,38 @@
   body:not(.in-lecture-view) .lecture-content-section {
     display: none !important;
   }
+</style><style id="bulletproof-view-isolation">
+  /* عزل تام لشاشة المحاضرة وأقسامها */
+  #home-view, #subject-overview-view, #lecture-view {
+    width: 100%;
+    position: relative;
+  }
+  
+  /* إخفاء شاشة المحاضرة بالكامل عند التواجد بالرئيسية أو المادة */
+  body:not(.in-lecture-view) #lecture-view {
+    display: none !important;
+  }
+  
+  /* إخفاء الرئيسية وشاشة المادة عند التواجد داخل المحاضرة */
+  body.in-lecture-view #home-view,
+  body.in-lecture-view #subject-overview-view {
+    display: none !important;
+  }
+  
+  /* في وضع عرض المحاضرة كاملة 'all' إظهار الأقسام الأساسية فقط */
+  #lecture-view.show-all #section-terms,
+  #lecture-view.show-all #section-qa,
+  #lecture-view.show-all #section-exam {
+    display: block !important;
+  }
+  #lecture-view.show-all #section-flashcards,
+  #lecture-view.show-all #section-video,
+  #lecture-view.show-all #section-files,
+  #lecture-view.show-all #section-images,
+  #lecture-view.show-all #section-mindmap,
+  #lecture-view.show-all #section-explanation {
+    display: none !important;
+  }
 </style></head>
 
 <body>
@@ -16871,6 +16903,96 @@ function handleDragLeave(e) {
       window.showSubjectOverview(state.activeSubjectId || 'anat101');
     }
   };
+</script><script id="dom-structure-repair">
+  function ensureLectureDOMIntegrity() {
+    const lectureView = document.getElementById('lecture-view');
+    if (!lectureView) return;
+    
+    // نقل التبويبات والبحث وأقسام المحاضرة لداخل lecture-view في حال تسربت خارجه
+    const misplaced = document.querySelectorAll('.page-container > .study-tabs-container, .page-container > .filter-toolbar, .page-container > .lecture-content-section, .page-container > .flashcard-mode-section');
+    misplaced.forEach(el => {
+      lectureView.appendChild(el);
+    });
+  }
+
+  // إعادة كتابة دالة التبديل بين التبويبات لعزل المحتوى وضمان عدم خروجه
+  window.switchSection = function(sectionId) {
+    ensureLectureDOMIntegrity();
+    const lectureView = document.getElementById('lecture-view');
+    if (!lectureView) return;
+
+    // تحديث الأزرار
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      if (btn.getAttribute('data-section') === sectionId) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // إخفاء كل الأقسام أولاً
+    const allSections = lectureView.querySelectorAll('.lecture-content-section, .flashcard-mode-section, #section-flashcards');
+    allSections.forEach(sec => sec.style.display = 'none');
+    lectureView.classList.remove('show-all');
+
+    if (sectionId === 'all') {
+      lectureView.classList.add('show-all');
+      const terms = document.getElementById('section-terms');
+      const qa = document.getElementById('section-qa');
+      const exam = document.getElementById('section-exam');
+      if (terms) terms.style.display = 'block';
+      if (qa) qa.style.display = 'block';
+      if (exam) exam.style.display = 'block';
+    } else {
+      const target = document.getElementById(sectionId);
+      if (target) target.style.display = 'block';
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // تأمين دوال التنقل لتفعيل كلاس in-lecture-view وضبط المشاهد بدقة
+  window.showHomeView = function(pushState = true) {
+    document.body.classList.remove('in-lecture-view');
+    ensureLectureDOMIntegrity();
+    const hv = document.getElementById('home-view');
+    const sv = document.getElementById('subject-overview-view');
+    const lv = document.getElementById('lecture-view');
+    if (hv) hv.style.display = 'block';
+    if (sv) sv.style.display = 'none';
+    if (lv) lv.style.display = 'none';
+    if (pushState) history.pushState({ view: 'home' }, '', '#home');
+  };
+
+  window.showSubjectOverview = function(subjId, pushState = true) {
+    document.body.classList.remove('in-lecture-view');
+    ensureLectureDOMIntegrity();
+    const hv = document.getElementById('home-view');
+    const sv = document.getElementById('subject-overview-view');
+    const lv = document.getElementById('lecture-view');
+    if (hv) hv.style.display = 'none';
+    if (sv) sv.style.display = 'block';
+    if (lv) lv.style.display = 'none';
+    if (typeof renderSubjectLectures === 'function') renderSubjectLectures(subjId);
+    if (pushState) history.pushState({ view: 'subject', subjectId: subjId }, '', '#subject-' + subjId);
+  };
+
+  const _oldOpenLecture = window.openLecture;
+  window.openLecture = function(lecId, pushState = true) {
+    document.body.classList.add('in-lecture-view');
+    ensureLectureDOMIntegrity();
+    const hv = document.getElementById('home-view');
+    const sv = document.getElementById('subject-overview-view');
+    const lv = document.getElementById('lecture-view');
+    if (hv) hv.style.display = 'none';
+    if (sv) sv.style.display = 'none';
+    if (lv) lv.style.display = 'block';
+    if (typeof _oldOpenLecture === 'function') _oldOpenLecture(lecId, pushState);
+    window.switchSection('all');
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    ensureLectureDOMIntegrity();
+  });
 </script></body>
 
 </html>
